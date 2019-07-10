@@ -1,12 +1,12 @@
 package de.rieckpil.udemy.interceptors;
 
+import javax.interceptor.Interceptors;
+
+@Interceptors(BookPaymentInterceptor.class)
 public class BookPaymentProvider {
 
-    @SecurePayment
-    public void withdrawMoneyFromCustomer(String customerName, Integer price) {
-
-        // withdraw money
-
+    public void withdrawMoneyFromCustomer(String customerName, Integer amount) {
+        System.out.println("Withdraw money from: " + customerName + " amount: " + amount);
     }
 
 }

@@ -1,8 +1,11 @@
 package de.rieckpil.udemy.interceptors;
 
 import javax.interceptor.AroundInvoke;
+import javax.interceptor.Interceptor;
 import javax.interceptor.InvocationContext;
 
+@Interceptor
+@SecurePayment
 public class BookPaymentInterceptor {
 
     @AroundInvoke
@@ -16,7 +19,4 @@ public class BookPaymentInterceptor {
         return ctx.proceed();
     }
 
-
-    // @AroundConstruct
-    // @PostConstruct
 }

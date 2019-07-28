@@ -4,6 +4,14 @@
 
 Show the following:
 
-- 
-- 
--
+# Endpoints
+
+
+# Content Negotiation
+
+
+# Client and WebTarget
+
+
+# Provider
+

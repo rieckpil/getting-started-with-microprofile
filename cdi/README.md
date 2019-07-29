@@ -1,10 +1,7 @@
-* [GitHub](https://github.com/eclipse/microprofile-config)
-* [Spec](https://github.com/eclipse/microprofile-config/releases/download/1.3/microprofile-config-spec-1.3.pdf)
+# CDI (Context and Dependency Injection)
 
-Links:
-
-- http://www.cdi-spec.org/
-- https://docs.jboss.org/weld/reference/latest/en-US/html_single/
+* [GitHub](https://github.com/eclipse-ee4j/cdi)
+* [Spec homepage](http://www.cdi-spec.org/)
 
 Show the following:
 

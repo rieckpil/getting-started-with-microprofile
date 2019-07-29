@@ -1,5 +1,27 @@
-* [GitHub](https://github.com/eclipse/microprofile-config)
-* [Spec](https://github.com/eclipse/microprofile-config/releases/download/1.3/microprofile-config-spec-1.3.pdf)
+# JAX-RS: Java API for RESTful Web Services (JAX-RS) 
+
+* [GitHub](https://github.com/eclipse-ee4j/jaxrs-api)
+* [Spec homepage](https://projects.eclipse.org/projects/ee4j.jaxrs)
+
+## Request & response flow
+
+```
+                                CLIENT                                                                              SERVER
+       +----------------------------------------------------------------+      +-----------------------------------------------------------------------------------+
+       |                                                                |      |                                                                                   |  
+       |  ClientRequestFilter -> WriterInterceptor ->  MessageBodyWriter ---------->  PreMatchingRequestFilter ->  ContainerRequestFilter ---> ReaderInterceptor   |
+       |                                                                |      |                                                                      |            |
+       |                                                                |      |                                                                      v            |
+       |                                                                |      |                                                                MessageBodyReader  |
+       |                                                                |      |                                                                      |            |
+       |                                                                |      |                                                                      v            |
+       |                                                                |      |                                                                 ResourceMethod    |
+       |                                                                |      |                                                                      |            |
+       |                                                                |      |                                                                      v            |
+       |  MessageBodyReader <- ReaderInterceptor <- ClientResponseFilter <-----------  MessageBodyWriter   <---   WriterInterceptor <--- ContainerResponseFilter   |
+       |                                                                |      |                                                                                   | 
+       +----------------------------------------------------------------+      +-----------------------------------------------------------------------------------+
+```
 
 Show the following:
 

@@ -1,0 +1,14 @@
+[
+  {
+    "title": "Java 11",
+    "author": "Duke",
+    "isPublished": true,
+    "pages": 110
+  },
+  {
+    "title": "Java 20",
+    "author": "Duke",
+    "isPublished": false,
+    "pages": 200
+  }
+]

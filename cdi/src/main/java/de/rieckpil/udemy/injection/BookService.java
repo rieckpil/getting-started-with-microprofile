@@ -11,7 +11,6 @@ import javax.enterprise.event.Observes;
 import javax.inject.Inject;
 import java.util.logging.Logger;
 
-
 @ApplicationScoped
 public class BookService {
 

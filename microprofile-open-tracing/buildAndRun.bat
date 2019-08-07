@@ -1,5 +1,6 @@
 @echo off
 call mvn clean package
-call docker build -t de.rieckpil.udemy/microprofile-config .
-call docker rm -f microprofile-config
-call docker run -d -p 8080:8080 -p 4848:4848 --name microprofile-config de.rieckpil.udemy/microprofile-config
+call docker build -t de.rieckpil.udemy/microprofile-open-tracing .
+call docker rm -f microprofile-open-tracing
+call docker run -d -p 9080:9080 -p 9443:9443 --name microprofile-open-tracing de.rieckpil.udemy/microprofile-open-tracing
+call docker logs -f microprofile-open-tracing

@@ -1,2 +1,2 @@
-FROM payara/server-full:latest
-COPY target/microprofile-config.war $DEPLOY_DIR
+FROM open-liberty:microProfile3-java11
+COPY --chown=1001:0  target/microprofile-fault-tolerance.war /config/dropins/

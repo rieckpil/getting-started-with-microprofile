@@ -6,6 +6,9 @@
     </featureManager>
 
     <mpMetrics authentication="false"/>
-    <sslDefault trustCACerts="true"/>
-    <httpEndpoint id="defaultHttpEndpoint" httpPort="9080" httpsPort="9443" />
+
+    <ssl id="defaultSSLConfig" keyStoreRef="defaultKeyStore" trustStoreRef="jdkTrustStore" />
+    <keyStore id="jdkTrustStore" location="${java.home}/lib/security/cacerts" password="changeit" />
+
+    <httpEndpoint id="defaultHttpEndpoint" httpPort="9080" httpsPort="9443"/>
 </server>

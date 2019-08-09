@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<server description="new server">
+
+    <featureManager>
+        <feature>microProfile-3.0</feature>
+    </featureManager>
+
+    <mpMetrics authentication="false"/>
+
+    <ssl id="defaultSSLConfig" keyStoreRef="defaultKeyStore" trustStoreRef="jdkTrustStore" />
+    <keyStore id="jdkTrustStore" location="${java.home}/lib/security/cacerts" password="changeit" />
+
+    <httpEndpoint id="defaultHttpEndpoint" httpPort="9080" httpsPort="9443"/>
+</server>

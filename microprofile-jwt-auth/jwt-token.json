@@ -1,1 +1,13 @@
-{"iss":"airhacks","jti":"42","sub":"duke","upn":"duke","groups":["chief","hacker"]}
+{
+  "iss": "airhacks",
+  "jti": "42",
+  "sub": "duke",
+  "upn": "duke",
+  "groups": [
+    "chief",
+    "hacker",
+    "admin"
+  ],
+  "administrator_level": "ADVANCED",
+  "administrator_id": 1337
+}

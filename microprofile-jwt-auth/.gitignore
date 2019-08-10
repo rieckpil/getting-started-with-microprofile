@@ -20,3 +20,8 @@
 /dist/
 /nbdist/
 /.nb-gradle/
+
+jwt-token.json
+jwtenizr-config.json
+microprofile-config.properties
+token.jwt

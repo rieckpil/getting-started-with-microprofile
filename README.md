@@ -2,6 +2,8 @@
 
 Repository for the YouTube series *Getting started with Eclipse MicroProfile 3.0*
 
+![](https://rieckpil.de/wp-content/uploads/2019/08/eclipseMicroProfileGettingStartedYouTubeSeriesLogo.png "Series Logo")
+
 ## Specifications:
 
 * **CDI**: [YouTube Video]() - [Blog post]() - [Source code](https://github.com/rieckpil/getting-started-with-eclipse-microprofile/tree/master/cdi)

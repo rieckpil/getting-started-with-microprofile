@@ -1,4 +1,3 @@
-#FROM payara/server-full:latest
-#COPY target/microprofile-health.war $DEPLOY_DIR
-FROM open-liberty:microProfile3-java11
-COPY target/microprofile-health.war /config/dropins
+FROM open-liberty:kernel-java11
+COPY --chown=1001:0  target/microprofile-health.war /config/dropins/
+COPY --chown=1001:0  server.xml /config

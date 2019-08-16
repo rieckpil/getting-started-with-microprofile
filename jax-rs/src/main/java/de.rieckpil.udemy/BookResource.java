@@ -1,7 +1,6 @@
 package de.rieckpil.udemy;
 
 import javax.annotation.PostConstruct;
-import javax.inject.Singleton;
 import javax.ws.rs.*;
 import javax.ws.rs.container.AsyncResponse;
 import javax.ws.rs.container.Suspended;
@@ -9,7 +8,6 @@ import javax.ws.rs.core.*;
 import java.util.ArrayList;
 import java.util.List;
 
-@Singleton
 @Path("books")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)

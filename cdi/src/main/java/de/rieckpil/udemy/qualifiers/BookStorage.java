@@ -1,6 +1,7 @@
 package de.rieckpil.udemy.qualifiers;
 
 import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 import javax.enterprise.context.ApplicationScoped;
 import javax.enterprise.inject.Instance;
 import javax.inject.Inject;
@@ -22,6 +23,11 @@ public class BookStorage {
     @PostConstruct
     public void init() {
         this.distributeBookToCustomer("Java for Beginners");
+    }
+
+    @PreDestroy
+    public void onPreDestroy() {
+        System.out.println("Bean is going to be destroyed");
     }
 
     public void distributeBookToCustomer(String bookName) {

@@ -26,6 +26,10 @@ Repository for the YouTube series *Getting started with Eclipse MicroProfile 3.0
 * **WAD** (Watch and Deploy) from [Adam Bien](https://wad.sh/) ([setup](https://rieckpil.de/review-improved-java-jakarta-ee-productivity-with-adam-biens-wad-watch-and-deploy/))
 * **JWTENIZR** from [Adam Bien](http://jwtenizr.sh/)
 
+## Start the example applications 
+
+Each subfolder contains a `buildAndRun.sh` (Linux/Mac) and `buildAndRun.bat` (Windows) file to build and start the application on your machine using **Docker**. You just need **Java 11** and **Maven** installed and a running Docker daemon to start everything. Once the application is up- and running, you can visit http://localhost:9080 to access it (if any JAX-RS endpoint is available in the project).
+
 ## Open Liberty configuration
 
 The following `server.xml` configuration is used:

@@ -1,7 +1,6 @@
 package de.rieckpil.udemy;
 
 import org.eclipse.microprofile.config.Config;
-import org.eclipse.microprofile.config.ConfigProvider;
 import org.eclipse.microprofile.config.inject.ConfigProperty;
 
 import javax.enterprise.context.ApplicationScoped;
@@ -12,7 +11,6 @@ import javax.inject.Provider;
 import java.util.List;
 import java.util.Optional;
 
-@ApplicationScoped
 public class BasicConfigurationInjection {
 
     @Inject
@@ -25,10 +23,6 @@ public class BasicConfigurationInjection {
     @Inject
     @ConfigProperty(name = "my.app.password")
     private Optional<String> password;
-
-    //@Inject
-    //@ConfigProperty(name = "my.app.token")
-    //private String name;
 
     @Inject
     @ConfigProperty(name = "my.app.timeout")
@@ -47,6 +41,7 @@ public class BasicConfigurationInjection {
     private Token token;
 
     public void init(@Observes @Initialized(ApplicationScoped.class) Object init) {
+        System.out.println(config.getValue("message", String.class));
         System.out.println(message);
         System.out.println(password.orElseGet(() -> "DefaultPassword"));
         System.out.println(timeout.get());
@@ -55,9 +50,4 @@ public class BasicConfigurationInjection {
         System.out.println(token);
     }
 
-    private void injectSimpleMessage() {
-        Config config = ConfigProvider.getConfig();
-        String message = config.getValue("message", String.class);
-        System.out.println("Injected message is: " + message);
-    }
 }

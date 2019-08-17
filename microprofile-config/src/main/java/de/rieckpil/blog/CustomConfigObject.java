@@ -1,4 +1,4 @@
-package de.rieckpil.udemy;
+package de.rieckpil.blog;
 
 import org.eclipse.microprofile.config.Config;
 import org.eclipse.microprofile.config.spi.ConfigProviderResolver;
@@ -14,6 +14,7 @@ public class CustomConfigObject {
                 .instance()
                 .getBuilder()
                 .addDefaultSources()
+                .withSources(new CustomConfigSource())
                 .addDiscoveredConverters()
                 .build();
 

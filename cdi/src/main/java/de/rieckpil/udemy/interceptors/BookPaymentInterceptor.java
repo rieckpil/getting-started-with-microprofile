@@ -1,4 +1,4 @@
-package de.rieckpil.udemy.interceptors;
+package de.rieckpil.blog.interceptors;
 
 import javax.interceptor.AroundInvoke;
 import javax.interceptor.Interceptor;

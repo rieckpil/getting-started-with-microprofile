@@ -1,4 +1,4 @@
-package de.rieckpil.udemy;
+package de.rieckpil.blog;
 
 import org.eclipse.microprofile.rest.client.annotation.ClientHeaderParam;
 import org.eclipse.microprofile.rest.client.annotation.RegisterProvider;
@@ -16,7 +16,7 @@ import java.util.concurrent.CompletionStage;
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
 @RegisterProvider(ResponseLoggingFilter.class)
-@ClientHeaderParam(name = "X-Application-Name", value = "MP-UDEMY")
+@ClientHeaderParam(name = "X-Application-Name", value = "MP-blog")
 public interface JSONPlaceholderClient {
 
     @GET

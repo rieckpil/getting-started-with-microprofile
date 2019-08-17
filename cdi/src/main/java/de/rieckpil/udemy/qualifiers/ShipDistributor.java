@@ -1,4 +1,4 @@
-package de.rieckpil.udemy.qualifiers;
+package de.rieckpil.blog.qualifiers;
 
 import javax.inject.Qualifier;
 import java.lang.annotation.Retention;

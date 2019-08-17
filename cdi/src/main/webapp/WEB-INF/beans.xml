@@ -4,9 +4,9 @@
        xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/beans_1_1.xsd"
        bean-discovery-mode="all">
     <interceptors>
-        <class>de.rieckpil.udemy.interceptors.BookPaymentInterceptor</class>
+        <class>de.rieckpil.blog.interceptors.BookPaymentInterceptor</class>
     </interceptors>
     <decorators>
-        <class>de.rieckpil.udemy.decorators.LargeWithdrawDecorator</class>
+        <class>de.rieckpil.blog.decorators.LargeWithdrawDecorator</class>
     </decorators>
 </beans>

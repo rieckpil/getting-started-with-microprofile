@@ -1,4 +1,4 @@
-package de.rieckpil.udemy;
+package de.rieckpil.blog;
 
 import javax.json.Json;
 import javax.json.JsonObject;

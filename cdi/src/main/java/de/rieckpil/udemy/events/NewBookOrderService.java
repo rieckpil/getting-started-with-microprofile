@@ -1,4 +1,4 @@
-package de.rieckpil.udemy.events;
+package de.rieckpil.blog.events;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.enterprise.event.Observes;

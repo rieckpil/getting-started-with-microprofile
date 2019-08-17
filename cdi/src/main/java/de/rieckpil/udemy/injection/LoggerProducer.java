@@ -1,4 +1,4 @@
-package de.rieckpil.udemy.injection;
+package de.rieckpil.blog.injection;
 
 import javax.enterprise.inject.Produces;
 import javax.enterprise.inject.spi.InjectionPoint;

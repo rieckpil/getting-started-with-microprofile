@@ -1,4 +1,4 @@
-package de.rieckpil.udemy;
+package de.rieckpil.blog;
 
 import javax.annotation.Priority;
 import javax.ws.rs.container.ContainerRequestContext;

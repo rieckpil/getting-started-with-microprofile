@@ -1,4 +1,4 @@
-package de.rieckpil.udemy;
+package de.rieckpil.blog;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.enterprise.context.Initialized;

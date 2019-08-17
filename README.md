@@ -10,7 +10,7 @@ Repository for the YouTube series *Getting started with Eclipse MicroProfile 3.0
 * **JAX-RS**: [YouTube Video]() - [Blog post]() - [Source code](https://github.com/rieckpil/getting-started-with-eclipse-microprofile/tree/master/jax-rs)
 * **JSON-B**: [YouTube Video]() - [Blog post]() - [Source code](https://github.com/rieckpil/getting-started-with-eclipse-microprofile/tree/master/json-b)
 * **JSON-P**: [YouTube Video]() - [Blog post]() - [Source code](https://github.com/rieckpil/getting-started-with-eclipse-microprofile/tree/master/json-p)
-* **MicroProfile Config**: [YouTube Video]() - [Blog post]() - [Source code](https://github.com/rieckpil/getting-started-with-eclipse-microprofile/tree/master/microprofile-config)
+* **MicroProfile Config**: [YouTube Video]() - [Blog post](https://rieckpil.de/whatis-eclipse-microprofile-config/) - [Source code](https://github.com/rieckpil/getting-started-with-eclipse-microprofile/tree/master/microprofile-config)
 * **MicroProfile Fault Tolerance**: [YouTube Video]() - [Blog post]() - [Source code](https://github.com/rieckpil/getting-started-with-eclipse-microprofile/tree/master/microprofile-fault-tolerance)
 * **MicroProfile Metrics**: [YouTube Video]() - [Blog post]() - [Source code](https://github.com/rieckpil/getting-started-with-eclipse-microprofile/tree/master/microprofile-metrics)
 * **MicroProfile JWT Auth**: [YouTube Video]() - [Blog post]() - [Source code](https://github.com/rieckpil/getting-started-with-eclipse-microprofile/tree/master/microprofile-jwt-auth)
@@ -77,7 +77,7 @@ All MicroProfile example projects use the following parent `pom.xml`:
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>de.rieckpil.udemy</groupId>
+	<groupId>de.rieckpil.blog</groupId>
 	<artifactId>microprofile-course-parent</artifactId>
 	<version>1.0-SNAPSHOT</version>
 	<packaging>pom</packaging>

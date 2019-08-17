@@ -1,4 +1,4 @@
-package de.rieckpil.udemy.interceptors;
+package de.rieckpil.blog.interceptors;
 
 @SecurePayment
 public class BookPaymentProvider {

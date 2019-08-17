@@ -1,4 +1,4 @@
-package de.rieckpil.udemy.decorators;
+package de.rieckpil.blog.decorators;
 
 public interface Account {
 

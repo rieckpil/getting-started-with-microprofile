@@ -1,4 +1,4 @@
-package de.rieckpil.udemy.qualifiers;
+package de.rieckpil.blog.qualifiers;
 
 @PlaneDistributor
 public class BookPlaneDistributor implements BookDistributor {

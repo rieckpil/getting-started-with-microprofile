@@ -1,4 +1,4 @@
-package de.rieckpil.udemy.qualifiers;
+package de.rieckpil.blog.qualifiers;
 
 @ShipDistributor
 public class BookShipDistributor implements BookDistributor {

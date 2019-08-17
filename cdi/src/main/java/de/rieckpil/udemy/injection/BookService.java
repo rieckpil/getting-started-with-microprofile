@@ -1,8 +1,8 @@
-package de.rieckpil.udemy.injection;
+package de.rieckpil.blog.injection;
 
-import de.rieckpil.udemy.decorators.CustomerAccount;
-import de.rieckpil.udemy.events.BookRequest;
-import de.rieckpil.udemy.interceptors.BookPaymentProvider;
+import de.rieckpil.blog.decorators.CustomerAccount;
+import de.rieckpil.blog.events.BookRequest;
+import de.rieckpil.blog.interceptors.BookPaymentProvider;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.enterprise.context.Initialized;

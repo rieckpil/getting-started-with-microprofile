@@ -1,4 +1,4 @@
-package de.rieckpil.udemy.injection;
+package de.rieckpil.blog.injection;
 
 import javax.inject.Inject;
 import java.util.logging.Logger;

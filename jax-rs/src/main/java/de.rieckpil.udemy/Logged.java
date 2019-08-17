@@ -1,4 +1,4 @@
-package de.rieckpil.udemy;
+package de.rieckpil.blog;
 
 import javax.ws.rs.NameBinding;
 import java.lang.annotation.Retention;

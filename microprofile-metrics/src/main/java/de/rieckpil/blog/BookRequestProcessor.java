@@ -6,14 +6,15 @@ import javax.enterprise.context.ApplicationScoped;
 import java.util.concurrent.ThreadLocalRandom;
 
 @ApplicationScoped
-public class DataStream {
+public class BookRequestProcessor {
 
     @Gauge(unit = "Remaining book requests to process")
     public Long remainingBookRequestsToProcess() {
+        // monitor e.g. current size of a JMS queue
         return ThreadLocalRandom.current().nextLong(0, 1_000_000);
     }
 
-    public String getTwitterFeed() {
-        return "Hello Duke";
+    public String getLatestBookRequestId() {
+        return String.valueOf(ThreadLocalRandom.current().nextLong(10));
     }
 }

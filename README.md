@@ -43,15 +43,13 @@ The following `server.xml` configuration is used:
     <featureManager>
         <feature>microProfile-3.0</feature>
     </featureManager>
-    
+
     <mpMetrics authentication="false"/>
 
-    <quickStartSecurity userName="admin" userPassword="admin" />
+    <ssl id="defaultSSLConfig" keyStoreRef="defaultKeyStore" trustStoreRef="jdkTrustStore" />
+    <keyStore id="jdkTrustStore" location="${java.home}/lib/security/cacerts" password="changeit" />
 
-    <httpEndpoint id="defaultHttpEndpoint" httpPort="9080" httpsPort="9443" />
-
-    <applicationManager autoExpand="true" />
-    <applicationMonitor updateTrigger="mbean" />
+    <httpEndpoint id="defaultHttpEndpoint" httpPort="9080" httpsPort="9443"/>
 </server>
 ```
 

@@ -21,12 +21,10 @@ public class BookResource {
     private BookRequestProcessor bookRequestProcessor;
 
     @GET
-    @Metered(name = "getTextDuration", tags = {"spec=JAX-RS", "level=REST"})
+    @Metered(name = "getBookCommentForLatestBookRequest", tags = {"spec=JAX-RS", "level=REST"})
     @Produces(MediaType.TEXT_PLAIN)
     public Response getBookCommentForLatestBookRequest() {
-
         String latestBookRequestId = bookRequestProcessor.getLatestBookRequestId();
-
         return Response.ok(this.bookCommentClient.getBookCommentByBookId(latestBookRequestId)).build();
     }
 }

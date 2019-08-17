@@ -5,5 +5,5 @@ Inject configuration properties from property files, environment variables, syst
 * [GitHub](https://github.com/eclipse/microprofile-config)
 * [Specification](https://github.com/eclipse/microprofile-config/releases/download/1.3/microprofile-config-spec-1.3.pdf)
 * Current version: **1.3** in **MicroProfile 3.0**
-* Detailed blog post about this specification: [#WHATIS?: MicroProfile Config]()
-* YouTube video about this specification: [Getting started with Eclipse MicroProfile 3.0 - MicroProfile Config 1.3]()
+* Detailed blog post about this specification: [#WHATIS?: MicroProfile Config](https://rieckpil.de/whatis-eclipse-microprofile-config/)
+* YouTube video about this specification: [Getting started with Eclipse MicroProfile 3.0 - MicroProfile Config 1.3](https://www.youtube.com/watch?v=0h3QceSBBiY)

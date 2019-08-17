@@ -1,5 +1,7 @@
 # Getting started with Eclipse MicroProfile 3.0 
 
+[![Build Status](https://travis-ci.org/rieckpil/getting-started-with-eclipse-microprofile.svg?branch=master)](https://travis-ci.org/rieckpil/getting-started-with-eclipse-microprofile)
+
 Repository for the YouTube series *Getting started with Eclipse MicroProfile 3.0*
 
 ![](https://rieckpil.de/wp-content/uploads/2019/08/eclipseMicroProfileGettingStartedYouTubeSeriesLogo.png "Series Logo")

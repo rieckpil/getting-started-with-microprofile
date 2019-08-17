@@ -93,6 +93,7 @@ All MicroProfile example projects use the following parent `pom.xml`:
 	</dependencies>
 
 	<properties>
+		<java.version>11</java.version>
 		<maven.compiler.source>11</maven.compiler.source>
 		<maven.compiler.target>11</maven.compiler.target>
 		<failOnMissingWebXml>false</failOnMissingWebXml>

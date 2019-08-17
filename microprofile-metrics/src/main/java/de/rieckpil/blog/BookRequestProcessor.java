@@ -8,8 +8,8 @@ import java.util.concurrent.ThreadLocalRandom;
 @ApplicationScoped
 public class DataStream {
 
-    @Gauge(unit = "Twitter feeds per second")
-    public Long getTwitterFeedsPerSecond() {
+    @Gauge(unit = "Remaining book requests to process")
+    public Long remainingBookRequestsToProcess() {
         return ThreadLocalRandom.current().nextLong(0, 1_000_000);
     }
 

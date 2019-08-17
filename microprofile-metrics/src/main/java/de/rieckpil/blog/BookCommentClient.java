@@ -3,15 +3,16 @@ package de.rieckpil.blog;
 import org.eclipse.microprofile.metrics.annotation.Counted;
 import org.eclipse.microprofile.metrics.annotation.Timed;
 
+import javax.enterprise.context.ApplicationScoped;
 import javax.enterprise.context.RequestScoped;
 import java.util.UUID;
 import java.util.concurrent.ThreadLocalRandom;
 
-@RequestScoped
-public class DataProvider {
+@ApplicationScoped
+public class BookCommentClient {
 
     @Counted
-    public DataProvider() {
+    public BookCommentClient() {
     }
 
     @Counted(name = "randomStringInvocation", tags = {"spec=CDI"})

@@ -6,18 +6,18 @@ Repository for the YouTube series *Getting started with Eclipse MicroProfile 3.0
 
 ## Specifications:
 
-* **CDI**: [YouTube Video]() - [Blog post]() - [Source code](https://github.com/rieckpil/getting-started-with-eclipse-microprofile/tree/master/cdi)
-* **JAX-RS**: [YouTube Video]() - [Blog post]() - [Source code](https://github.com/rieckpil/getting-started-with-eclipse-microprofile/tree/master/jax-rs)
-* **JSON-B**: [YouTube Video]() - [Blog post]() - [Source code](https://github.com/rieckpil/getting-started-with-eclipse-microprofile/tree/master/json-b)
-* **JSON-P**: [YouTube Video]() - [Blog post]() - [Source code](https://github.com/rieckpil/getting-started-with-eclipse-microprofile/tree/master/json-p)
-* **MicroProfile Config**: [YouTube Video]() - [Blog post](https://rieckpil.de/whatis-eclipse-microprofile-config/) - [Source code](https://github.com/rieckpil/getting-started-with-eclipse-microprofile/tree/master/microprofile-config)
-* **MicroProfile Fault Tolerance**: [YouTube Video]() - [Blog post]() - [Source code](https://github.com/rieckpil/getting-started-with-eclipse-microprofile/tree/master/microprofile-fault-tolerance)
-* **MicroProfile Metrics**: [YouTube Video]() - [Blog post]() - [Source code](https://github.com/rieckpil/getting-started-with-eclipse-microprofile/tree/master/microprofile-metrics)
-* **MicroProfile JWT Auth**: [YouTube Video]() - [Blog post]() - [Source code](https://github.com/rieckpil/getting-started-with-eclipse-microprofile/tree/master/microprofile-jwt-auth)
-* **MicroProfile Rest Client**: [YouTube Video]() - [Blog post]() - [Source code](https://github.com/rieckpil/getting-started-with-eclipse-microprofile/tree/master/microprofile-rest-client)
-* **MicroProfile OpenAPI**: [YouTube Video]() - [Blog post]() - [Source code](https://github.com/rieckpil/getting-started-with-eclipse-microprofile/tree/master/microprofile-open-api)
-* **MicroProfile OpenTracing**: [YouTube Video]() - [Blog post]() - [Source code](https://github.com/rieckpil/getting-started-with-eclipse-microprofile/tree/master/microprofile-open-tracing)
-* **MicroProfile Health Check**: [YouTube Video]() - [Blog post]() - [Source code](https://github.com/rieckpil/getting-started-with-eclipse-microprofile/tree/master/microprofile-health)
+* **CDI**: [YouTube Video] - [Blog post] - [Source code](https://github.com/rieckpil/getting-started-with-eclipse-microprofile/tree/master/cdi)
+* **JAX-RS**: [YouTube Video] - [Blog post] - [Source code](https://github.com/rieckpil/getting-started-with-eclipse-microprofile/tree/master/jax-rs)
+* **JSON-B**: [YouTube Video] - [Blog post] - [Source code](https://github.com/rieckpil/getting-started-with-eclipse-microprofile/tree/master/json-b)
+* **JSON-P**: [YouTube Video] - [Blog post] - [Source code](https://github.com/rieckpil/getting-started-with-eclipse-microprofile/tree/master/json-p)
+* **MicroProfile Config**: [YouTube Video](https://youtu.be/0h3QceSBBiY) - [Blog post](https://rieckpil.de/whatis-eclipse-microprofile-config/) - [Source code](https://github.com/rieckpil/getting-started-with-eclipse-microprofile/tree/master/microprofile-config)
+* **MicroProfile Fault Tolerance**: [YouTube Video] - [Blog post] - [Source code](https://github.com/rieckpil/getting-started-with-eclipse-microprofile/tree/master/microprofile-fault-tolerance)
+* **MicroProfile Metrics**: [YouTube Video] - [Blog post] - [Source code](https://github.com/rieckpil/getting-started-with-eclipse-microprofile/tree/master/microprofile-metrics)
+* **MicroProfile JWT Auth**: [YouTube Video] - [Blog post] - [Source code](https://github.com/rieckpil/getting-started-with-eclipse-microprofile/tree/master/microprofile-jwt-auth)
+* **MicroProfile Rest Client**: [YouTube Video] - [Blog post] - [Source code](https://github.com/rieckpil/getting-started-with-eclipse-microprofile/tree/master/microprofile-rest-client)
+* **MicroProfile OpenAPI**: [YouTube Video] - [Blog post] - [Source code](https://github.com/rieckpil/getting-started-with-eclipse-microprofile/tree/master/microprofile-open-api)
+* **MicroProfile OpenTracing**: [YouTube Video] - [Blog post] - [Source code](https://github.com/rieckpil/getting-started-with-eclipse-microprofile/tree/master/microprofile-open-tracing)
+* **MicroProfile Health Check**: [YouTube Video] - [Blog post] - [Source code](https://github.com/rieckpil/getting-started-with-eclipse-microprofile/tree/master/microprofile-health)
 
 ## Technologies used for this series:
 

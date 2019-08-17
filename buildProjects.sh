@@ -1,5 +1,6 @@
 #!/bin/bash
-declare -a arr=("cdi" 
+declare -a arr=(
+ "cdi" 
  "jax-rs"
  "json-b"
  "json-p"

@@ -8,7 +8,7 @@ import java.util.concurrent.ThreadLocalRandom;
 @ApplicationScoped
 public class BookRequestProcessor {
 
-    @Gauge(unit = "Remaining book requests to process")
+    @Gauge(unit = "amount")
     public Long remainingBookRequestsToProcess() {
         // monitor e.g. current size of a JMS queue
         return ThreadLocalRandom.current().nextLong(0, 1_000_000);

@@ -39,7 +39,6 @@ public class BookCommentClient {
     }
 
     @Timed(name = "getBookCommentByBookIdDuration")
-    @Counted(name = "getBookCommentByBookIdCounter", tags = {"spec=CDI"})
     public String getBookCommentByBookId(String bookId) {
         this.sleepRandom();
 

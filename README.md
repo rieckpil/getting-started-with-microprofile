@@ -14,7 +14,7 @@ Repository for the YouTube series *Getting started with Eclipse MicroProfile 3.0
 * **JSON-P**: [YouTube Video] - [Blog post] - [Source code](https://github.com/rieckpil/getting-started-with-eclipse-microprofile/tree/master/json-p)
 * **MicroProfile Config**: [YouTube Video](https://youtu.be/0h3QceSBBiY) - [Blog post](https://rieckpil.de/whatis-eclipse-microprofile-config/) - [Source code](https://github.com/rieckpil/getting-started-with-eclipse-microprofile/tree/master/microprofile-config)
 * **MicroProfile Fault Tolerance**: [YouTube Video] - [Blog post] - [Source code](https://github.com/rieckpil/getting-started-with-eclipse-microprofile/tree/master/microprofile-fault-tolerance)
-* **MicroProfile Metrics**: [YouTube Video] - [Blog post] - [Source code](https://github.com/rieckpil/getting-started-with-eclipse-microprofile/tree/master/microprofile-metrics)
+* **MicroProfile Metrics**: [YouTube Video](https://www.youtube.com/watch?v=jI6DoNYVd-U) - [Blog post](https://rieckpil.de/whatis-eclipse-microprofile-metrics/) - [Source code](https://github.com/rieckpil/getting-started-with-eclipse-microprofile/tree/master/microprofile-metrics)
 * **MicroProfile JWT Auth**: [YouTube Video] - [Blog post] - [Source code](https://github.com/rieckpil/getting-started-with-eclipse-microprofile/tree/master/microprofile-jwt-auth)
 * **MicroProfile Rest Client**: [YouTube Video] - [Blog post] - [Source code](https://github.com/rieckpil/getting-started-with-eclipse-microprofile/tree/master/microprofile-rest-client)
 * **MicroProfile OpenAPI**: [YouTube Video] - [Blog post] - [Source code](https://github.com/rieckpil/getting-started-with-eclipse-microprofile/tree/master/microprofile-open-api)

@@ -1,12 +1,7 @@
-# MicroProfile Health Check
+# MicroProfile Health
 
 * [GitHub](https://github.com/eclipse/microprofile-health)
 * [Spec](https://github.com/eclipse/microprofile-health/releases/download/2.0.1/microprofile-health-spec.pdf)
 * Current version: **2.0.1** in **MicroProfile 3.0**
-
-Show the following:
-
-- In an application, there can be zero or more procedures bound to a given health endpoint. The
-  overall application health for a given endpoint is the logical AND of all of the procedures bound to
-  it.
-- @Liveness and @Readiness on the same check
+* Detailed blog post about this specification: [#WHATIS?: MicroProfile Health](https://rieckpil.de/whatis-eclipse-microprofile-health/)
+* YouTube video about this specification: [Getting started with Eclipse MicroProfile 3.0 - MicroProfile Health 2.0]()

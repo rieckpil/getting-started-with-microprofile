@@ -19,7 +19,7 @@ Repository for the YouTube series *Getting started with Eclipse MicroProfile 3.0
 * **MicroProfile Rest Client**: [YouTube Video] - [Blog post] - [Source code](https://github.com/rieckpil/getting-started-with-eclipse-microprofile/tree/master/microprofile-rest-client)
 * **MicroProfile OpenAPI**: [YouTube Video] - [Blog post] - [Source code](https://github.com/rieckpil/getting-started-with-eclipse-microprofile/tree/master/microprofile-open-api)
 * **MicroProfile OpenTracing**: [YouTube Video] - [Blog post] - [Source code](https://github.com/rieckpil/getting-started-with-eclipse-microprofile/tree/master/microprofile-open-tracing)
-* **MicroProfile Health Check**: [YouTube Video] - [Blog post] - [Source code](https://github.com/rieckpil/getting-started-with-eclipse-microprofile/tree/master/microprofile-health)
+* **MicroProfile Health**: [YouTube Video] - [Blog post](https://rieckpil.de/whatis-eclipse-microprofile-health/) - [Source code](https://github.com/rieckpil/getting-started-with-eclipse-microprofile/tree/master/microprofile-health)
 
 ## Technologies used for this series:
 

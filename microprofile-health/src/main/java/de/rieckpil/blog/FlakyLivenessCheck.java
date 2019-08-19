@@ -13,14 +13,10 @@ public class FlakyLivenessCheck implements HealthCheck {
     @Override
     public HealthCheckResponse call() {
 
-        HealthCheckResponseBuilder responseBuilder = HealthCheckResponse
+        return HealthCheckResponse
                 .builder()
-                .name("liveness");
-
-        if (ThreadLocalRandom.current().nextBoolean()) {
-            return responseBuilder.down().build();
-        }
-
-        return responseBuilder.up().build();
+                .state(ThreadLocalRandom.current().nextBoolean())
+                .name("liveness")
+                .build();
     }
 }

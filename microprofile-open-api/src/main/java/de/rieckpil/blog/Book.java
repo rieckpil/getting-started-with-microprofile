@@ -6,6 +6,15 @@ public class Book {
     private String author;
     private Long id;
 
+    public Book() {
+    }
+
+    public Book(String title, String author, Long id) {
+        this.title = title;
+        this.author = author;
+        this.id = id;
+    }
+
     public String getTitle() {
         return title;
     }

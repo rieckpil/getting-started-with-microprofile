@@ -25,7 +25,7 @@ public class BookResource {
     @Produces(MediaType.APPLICATION_JSON)
     public Response getAllBooks() {
         System.out.println("Get all books...");
-        return Response.ok().build();
+        return Response.ok(new Book("MicroProfile", "Duke", 1L)).build();
     }
 
     @GET
@@ -36,7 +36,7 @@ public class BookResource {
     @Consumes({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
     public Response getBookById(@PathParam("id") Long id) {
         System.out.println("Get book by id...");
-        return Response.ok().build();
+        return Response.ok(new Book("MicroProfile", "Duke", 1L)).build();
     }
 
     @POST

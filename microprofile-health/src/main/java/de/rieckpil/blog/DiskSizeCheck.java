@@ -17,17 +17,12 @@ public class DiskSizeCheck implements HealthCheck {
         long freeSpace = file.getFreeSpace() / 1024 / 1024;
 
         HealthCheckResponseBuilder responseBuilder = HealthCheckResponse.builder()
-                .name("disk")
+                .name("diskSizeCheck")
                 .withData("remainingSpace", freeSpace);
 
-        if (freeSpace < 1_000) {
-            return responseBuilder
-                    .down()
-                    .build();
-        }
-
         return responseBuilder
-                .up()
+                .state(freeSpace > 100)
                 .build();
+
     }
 }

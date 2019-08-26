@@ -1,7 +1,5 @@
 package de.rieckpil.blog;
 
-import org.eclipse.microprofile.opentracing.Traced;
-
 import javax.enterprise.context.ApplicationScoped;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -17,7 +15,6 @@ public class PriceResource {
 
     @GET
     @Path("/{id}")
-    @Traced
     @Produces(MediaType.TEXT_PLAIN)
     public Response getPriceForBook(@PathParam("id") Integer bookId) {
         System.out.println("Retrieving price for book with id: " + bookId);

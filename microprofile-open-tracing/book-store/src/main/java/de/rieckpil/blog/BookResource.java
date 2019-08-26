@@ -1,7 +1,5 @@
 package de.rieckpil.blog;
 
-import org.eclipse.microprofile.opentracing.Traced;
-
 import javax.annotation.PostConstruct;
 import javax.enterprise.context.ApplicationScoped;
 import javax.json.Json;
@@ -46,7 +44,6 @@ public class BookResource {
     }
 
     @GET
-    @Traced
     @Produces(MediaType.APPLICATION_JSON)
     public Response getAvailableBooks() {
         return Response.ok(this.books).build();

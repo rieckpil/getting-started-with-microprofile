@@ -1,7 +1,5 @@
 package de.rieckpil.blog;
 
-import org.eclipse.microprofile.opentracing.Traced;
-
 import javax.inject.Inject;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -16,7 +14,6 @@ public class BookResource {
     private BookProvider bookProvider;
 
     @GET
-    @Traced
     @Produces(MediaType.APPLICATION_JSON)
     public Response getBooks() {
         return Response.ok(bookProvider.getBooksFromBookStore()).build();

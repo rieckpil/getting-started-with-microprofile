@@ -1,7 +1,5 @@
 package de.rieckpil.blog;
 
-import org.eclipse.microprofile.opentracing.Traced;
-
 import javax.annotation.PostConstruct;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
@@ -36,7 +34,6 @@ public class BookProvider {
         this.bookStoreTarget = client.target("http://book-store:9080/resources/books");
     }
 
-    @Traced
     public JsonArray getBooksFromBookStore() {
 
         JsonArray books = this.bookStoreTarget

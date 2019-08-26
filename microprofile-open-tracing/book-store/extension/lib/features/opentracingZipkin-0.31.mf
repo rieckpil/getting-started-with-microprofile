@@ -1,0 +1,14 @@
+IBM-Feature-Version: 2
+IBM-ShortName: opentracingZipkin-0.31
+Subsystem-Content: com.ibm.websphere.appserver.opentracing-1.1; ibm.tolerates:="1.2,1.3"; type="osgi.subsystem.feature",
+ com.ibm.ws.opentracing.zipkin; version="[1.3.0,1.3.200)",
+ com.ibm.websphere.appserver.jaxrs-2.0; type="osgi.subsystem.feature"; ibm.tolerates:=2.1,
+ com.ibm.websphere.appserver.cdi-1.2; type="osgi.subsystem.feature"; ibm.tolerates:=2.0
+Subsystem-Description: %description
+Subsystem-License: https://www.eclipse.org/legal/epl-v10.html
+Subsystem-Localization: OSGI-INF/l10n/com.ibm.websphere.appserver.opentracingZipkin-0.31
+Subsystem-ManifestVersion: 1
+Subsystem-Name: Opentracing Zipkin Tracer implementation
+Subsystem-SymbolicName: com.ibm.websphere.appserver.opentracingZipkin-0.31; visibility:=public; singleton:=true
+Subsystem-Type: osgi.subsystem.feature
+Subsystem-Version: 1.0.0

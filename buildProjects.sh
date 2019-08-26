@@ -10,7 +10,8 @@ declare -a arr=(
  "microprofile-jwt-auth"
  "microprofile-metrics"
  "microprofile-open-api"
- "microprofile-open-tracing"
+ "microprofile-open-tracing/book-store"
+ "microprofile-open-tracing/book-store-client"
  "microprofile-rest-client"
 )
 

@@ -13,13 +13,13 @@ import javax.ws.rs.core.Response;
 public class BookResource {
 
     @Inject
-    private BookManager bookManager;
+    private BookProvider bookProvider;
 
     @GET
     @Traced
     @Produces(MediaType.APPLICATION_JSON)
-    public Response getBook() throws InterruptedException {
-        return Response.ok(bookManager.getBook()).build();
+    public Response getBooks() {
+        return Response.ok(bookProvider.getBooksFromBookStore()).build();
     }
 
 }

@@ -1,7 +1,5 @@
 package de.rieckpil.blog;
 
-import org.eclipse.microprofile.opentracing.Traced;
-
 import javax.annotation.PostConstruct;
 import javax.enterprise.context.RequestScoped;
 import javax.ws.rs.client.Client;
@@ -10,9 +8,10 @@ import javax.ws.rs.client.WebTarget;
 import java.util.concurrent.TimeUnit;
 
 @RequestScoped
-public class PriceManager {
+public class PriceCalculator {
 
-    private WebTarget webTarget;
+    private WebTarget bookStorePriceTarget;
+    private Double discount = 1.5;
 
     @PostConstruct
     public void setUp() {
@@ -21,11 +20,13 @@ public class PriceManager {
                 .connectTimeout(2, TimeUnit.SECONDS)
                 .readTimeout(2, TimeUnit.SECONDS)
                 .build();
-        this.webTarget = client.target("http://localhost:9080/resources/prices");
+
+        this.bookStorePriceTarget = client.target("http://book-store:9080/resources/prices");
     }
 
-    @Traced
-    public Long providePriceForBook() {
-        return this.webTarget.request().get(Long.class);
+    public Double getPriceForBook(int id) {
+        Double bookPrice = this.bookStorePriceTarget.path(String.valueOf(id)).request().get().readEntity(Double.class);
+        return Math.round((bookPrice - discount) * 100.0) / 100.0;
     }
+
 }

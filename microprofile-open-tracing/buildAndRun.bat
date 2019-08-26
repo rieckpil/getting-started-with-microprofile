@@ -1,6 +1,5 @@
 @echo off
-call mvn clean package
-call docker build -t de.rieckpil.blog/microprofile-open-tracing .
-call docker rm -f microprofile-open-tracing
-call docker run -d -p 9080:9080 -p 9443:9443 --name microprofile-open-tracing de.rieckpil.blog/microprofile-open-tracing
-call docker logs -f microprofile-open-tracing
+call mvn clean -f book-store/pom.xml package
+call mvn clean -f book-store-client/pom.xml package
+call docker-compose build
+call docker-compose up --force-recreate

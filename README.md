@@ -17,7 +17,7 @@ Repository for the [YouTube series](https://www.youtube.com/watch?v=0h3QceSBBiY&
 * **MicroProfile Metrics**: [YouTube Video](https://www.youtube.com/watch?v=jI6DoNYVd-U) - [Blog post](https://rieckpil.de/whatis-eclipse-microprofile-metrics/) - [Source code](https://github.com/rieckpil/getting-started-with-eclipse-microprofile/tree/master/microprofile-metrics)
 * **MicroProfile JWT Auth**: [YouTube Video] - [Blog post] - [Source code](https://github.com/rieckpil/getting-started-with-eclipse-microprofile/tree/master/microprofile-jwt-auth)
 * **MicroProfile Rest Client**: [YouTube Video] - [Blog post] - [Source code](https://github.com/rieckpil/getting-started-with-eclipse-microprofile/tree/master/microprofile-rest-client)
-* **MicroProfile OpenAPI**: [YouTube Video] - [Blog post](https://rieckpil.de/whatis-eclipse-microprofile-openapi/) - [Source code](https://github.com/rieckpil/getting-started-with-eclipse-microprofile/tree/master/microprofile-open-api)
+* **MicroProfile OpenAPI**: [YouTube Video](https://www.youtube.com/watch?v=Rn7T26UW_H8) - [Blog post](https://rieckpil.de/whatis-eclipse-microprofile-openapi/) - [Source code](https://github.com/rieckpil/getting-started-with-eclipse-microprofile/tree/master/microprofile-open-api)
 * **MicroProfile OpenTracing**: [YouTube Video] - [Blog post](https://rieckpil.de/whatis-eclipse-microprofile-opentracing/) - [Source code](https://github.com/rieckpil/getting-started-with-eclipse-microprofile/tree/master/microprofile-open-tracing)
 * **MicroProfile Health**: [YouTube Video](https://www.youtube.com/watch?v=nq_gdPUTx5c) - [Blog post](https://rieckpil.de/whatis-eclipse-microprofile-health/) - [Source code](https://github.com/rieckpil/getting-started-with-eclipse-microprofile/tree/master/microprofile-health)
 
@@ -36,7 +36,7 @@ Each subfolder contains a `buildAndRun.sh` (Linux/Mac) and `buildAndRun.bat` (Wi
 
 ## Open Liberty configuration
 
-The following `server.xml` configuration is used:
+The following base `server.xml` configuration is used:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>

@@ -10,8 +10,6 @@ services:
       - book-store
   book-store:
     build: book-store/
-    ports:
-      - "9081:9080"
     links:
       - zipkin
   zipkin:

@@ -21,7 +21,7 @@ public interface JSONPlaceholderClient {
 
     @GET
     @Path("/posts")
-    JsonArray getAllPosts();
+    JsonArray getAllPosts(@QueryParam("orderBy") String orderDirection);
 
     @GET
     @Path("/posts/{id}")

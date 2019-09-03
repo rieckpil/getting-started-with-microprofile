@@ -1,5 +1,6 @@
 package de.rieckpil.blog;
 
+import org.eclipse.microprofile.rest.client.RestClientBuilder;
 import org.eclipse.microprofile.rest.client.inject.RestClient;
 
 import javax.enterprise.context.ApplicationScoped;
@@ -9,7 +10,10 @@ import javax.inject.Inject;
 import javax.json.Json;
 import javax.json.JsonObject;
 import javax.ws.rs.core.Response;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.util.UUID;
+import java.util.concurrent.TimeUnit;
 
 @ApplicationScoped
 public class PostService {
@@ -18,12 +22,26 @@ public class PostService {
     @RestClient
     JSONPlaceholderClient jsonPlaceholderClient;
 
-    public void init(@Observes @Initialized(ApplicationScoped.class) Object init) {
+    public void init(@Observes @Initialized(ApplicationScoped.class) Object init) throws URISyntaxException {
+        restClientBuilderExample();
         getAllPosts();
         getSinglePost();
         createNewPost();
         updateExistingPost();
         deletePost();
+    }
+
+    private void restClientBuilderExample() throws URISyntaxException {
+        System.out.println("------ Rest Client builder example ------");
+
+        JSONPlaceholderClient jsonApiClient = RestClientBuilder.newBuilder()
+                .baseUri(new URI("https://jsonplaceholder.typicode.com"))
+                .register(ResponseLoggingFilter.class)
+                .connectTimeout(2, TimeUnit.SECONDS)
+                .readTimeout(2, TimeUnit.SECONDS)
+                .build(JSONPlaceholderClient.class);
+
+        jsonApiClient.getPostById("1").thenAccept(System.out::println);
     }
 
     private void deletePost() {
@@ -72,7 +90,7 @@ public class PostService {
     private void getAllPosts() {
         System.out.println("------ all posts ------");
 
-        jsonPlaceholderClient.getAllPosts()
+        jsonPlaceholderClient.getAllPosts("ASC")
                 .stream()
                 .limit(5)
                 .forEach(System.out::println);

@@ -1,9 +1,10 @@
 package de.rieckpil.blog;
 
 import org.eclipse.microprofile.faulttolerance.*;
-import org.eclipse.microprofile.metrics.annotation.Counted;
 
 import javax.annotation.PostConstruct;
+import javax.enterprise.context.ApplicationScoped;
+import javax.json.Json;
 import javax.json.JsonArray;
 import javax.json.JsonObject;
 import javax.ws.rs.client.Client;
@@ -11,11 +12,13 @@ import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.MediaType;
 import java.time.LocalTime;
+import java.time.temporal.ChronoUnit;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.Future;
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.concurrent.TimeUnit;
 
+@ApplicationScoped
 public class RandomDataProvider {
 
     private WebTarget webTarget;
@@ -38,6 +41,8 @@ public class RandomDataProvider {
                 .get(JsonArray.class);
     }
 
+    @Fallback(PlaceHolderApiFallback.class)
+//  @Fallback(fallbackMethod = "getDefaultPost")
     public JsonObject getPostById(Long id) {
         return this.webTarget
                 .path(String.valueOf(id))
@@ -46,26 +51,28 @@ public class RandomDataProvider {
                 .get(JsonObject.class);
     }
 
+    public JsonObject getDefaultPost(Long id) {
+        return Json.createObjectBuilder()
+                .add("comment", "Lorem ipsum")
+                .add("postId", id)
+                .build();
+    }
+
     @CircuitBreaker(successThreshold = 10, requestVolumeThreshold = 5, failureRatio = 0.5, delay = 500)
     @Fallback(fallbackMethod = "getFallbackData")
     public String getRandomData() {
         if (ThreadLocalRandom.current().nextLong(1000) < 300) {
             return "random duke";
         } else {
-            throw new RuntimeException("Flaky service not accessible");
+            throw new RuntimeException("Random data not available");
         }
     }
 
-    @Timeout(4000)
+    @Timeout(value = 4, unit = ChronoUnit.SECONDS)
     @Fallback(fallbackMethod = "getFallbackData")
-    public String getDataFromLongRunningTask() {
-        try {
-            Thread.sleep(4500);
-            return "duke";
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-            return null;
-        }
+    public String getDataFromLongRunningTask() throws InterruptedException {
+        Thread.sleep(4500);
+        return "duke";
     }
 
     @Retry(maxDuration = 5000, maxRetries = 3, delay = 500, jitter = 200)
@@ -83,13 +90,8 @@ public class RandomDataProvider {
 
     @Bulkhead(5)
     @Asynchronous
-    public Future<String> getConcurrentServiceData(String name) {
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
+    public Future<String> getConcurrentServiceData(String name) throws InterruptedException {
+        Thread.sleep(1000);
         System.out.println(name + " is accessing the concurrent service");
         return CompletableFuture.completedFuture("concurrent duke");
     }

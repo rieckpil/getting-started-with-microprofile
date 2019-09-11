@@ -34,13 +34,6 @@ public class RandomDataProvider {
                 .target("https://jsonplaceholder.typicode.com/posts");
     }
 
-    public JsonArray getAllPosts() {
-        return this.webTarget
-                .request()
-                .accept(MediaType.APPLICATION_JSON)
-                .get(JsonArray.class);
-    }
-
     @Fallback(PlaceHolderApiFallback.class)
 //  @Fallback(fallbackMethod = "getDefaultPost")
     public JsonObject getPostById(Long id) {
@@ -90,10 +83,15 @@ public class RandomDataProvider {
 
     @Bulkhead(5)
     @Asynchronous
-    public Future<String> getConcurrentServiceData(String name) throws InterruptedException {
-        Thread.sleep(1000);
-        System.out.println(name + " is accessing the concurrent service");
-        return CompletableFuture.completedFuture("concurrent duke");
+    public Future<String> getConcurrentServiceData(String name) {
+        try {
+            System.out.println(name + " is accessing the concurrent service");
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } finally {
+            return CompletableFuture.completedFuture("concurrent duke");
+        }
     }
 
     public String getFallbackData() {

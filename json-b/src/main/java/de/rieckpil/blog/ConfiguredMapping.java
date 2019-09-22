@@ -8,15 +8,17 @@ import javax.json.bind.JsonbBuilder;
 import javax.json.bind.JsonbConfig;
 import javax.json.bind.config.PropertyNamingStrategy;
 import javax.json.bind.config.PropertyOrderStrategy;
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.Locale;
 
 @ApplicationScoped
 public class ConfiguredMapping {
 
-    private Book book = new Book("Java 11", LocalDate.now(), 1, false, null);
-
     public void init(@Observes @Initialized(ApplicationScoped.class) Object init) {
+
+        Book book = new Book("Java 11", LocalDate.now(), 1, false, null, new BigDecimal(50.50));
+
         JsonbConfig config = new JsonbConfig()
                 .withNullValues(false)
                 .withFormatting(true)

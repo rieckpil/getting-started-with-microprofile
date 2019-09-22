@@ -1,14 +1,16 @@
 package de.rieckpil.blog;
 
-import javax.json.bind.annotation.JsonbTransient;
+import javax.json.bind.annotation.*;
+import java.math.BigDecimal;
 import java.time.LocalDate;
 
+// @JsonbNillable
 public class Book {
 
-    // @JsonbProperty("book-title")
+    @JsonbProperty(nillable = true)
     private String title;
 
-    // @JsonbDateFormat("dd.MM.yyyy")
+    @JsonbDateFormat("dd.MM.yyyy")
     private LocalDate creationDate;
     private long pages;
 
@@ -16,16 +18,24 @@ public class Book {
     private boolean isPublished;
     private String author;
 
-    public Book() {
+    @JsonbNumberFormat("#0.00")
+    private BigDecimal price;
 
+    public Book() {
     }
 
-    public Book(String title, LocalDate creationDate, long pages, boolean isPublished, String author) {
+    // @JsonbCreator
+    public Book(@JsonbProperty("book-title") String title) {
+        this.title = title;
+    }
+
+    public Book(String title, LocalDate creationDate, long pages, boolean isPublished, String author, BigDecimal price) {
         this.title = title;
         this.creationDate = creationDate;
         this.pages = pages;
         this.isPublished = isPublished;
         this.author = author;
+        this.price = price;
     }
 
     public String getTitle() {
@@ -68,6 +78,14 @@ public class Book {
         this.author = author;
     }
 
+    public BigDecimal getPrice() {
+        return price;
+    }
+
+    public void setPrice(BigDecimal price) {
+        this.price = price;
+    }
+
     @Override
     public String toString() {
         return "Book{" +
@@ -76,6 +94,7 @@ public class Book {
                 ", pages=" + pages +
                 ", isPublished=" + isPublished +
                 ", author='" + author + '\'' +
+                ", price=" + price +
                 '}';
     }
 }

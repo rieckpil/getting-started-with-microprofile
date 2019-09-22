@@ -3,6 +3,7 @@ package de.rieckpil.blog;
 import javax.json.Json;
 import javax.json.JsonObject;
 import javax.json.bind.adapter.JsonbAdapter;
+import java.math.BigDecimal;
 import java.time.LocalDate;
 
 public class BookAdapter implements JsonbAdapter<Book, JsonObject> {
@@ -13,6 +14,7 @@ public class BookAdapter implements JsonbAdapter<Book, JsonObject> {
                 .add("title", book.getTitle() + " - " + book.getAuthor())
                 .add("creationDate", book.getCreationDate().toEpochDay())
                 .add("pages", book.getPages())
+                .add("price", book.getPrice().multiply(BigDecimal.valueOf(2l)))
                 .build();
     }
 
@@ -23,6 +25,7 @@ public class BookAdapter implements JsonbAdapter<Book, JsonObject> {
         book.setAuthor(jsonObject.getString("title").split("-")[1].trim());
         book.setPages(jsonObject.getInt("pages"));
         book.setPublished(false);
+        book.setPrice(BigDecimal.valueOf(jsonObject.getJsonNumber("price").longValue()));
         book.setCreationDate(LocalDate.ofEpochDay(jsonObject.getInt("creationDate")));
         return book;
     }

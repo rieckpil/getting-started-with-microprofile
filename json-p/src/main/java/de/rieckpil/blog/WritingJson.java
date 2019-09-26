@@ -3,9 +3,7 @@ package de.rieckpil.blog;
 import javax.enterprise.context.ApplicationScoped;
 import javax.enterprise.context.Initialized;
 import javax.enterprise.event.Observes;
-import javax.json.Json;
-import javax.json.JsonObject;
-import javax.json.JsonWriterFactory;
+import javax.json.*;
 import javax.json.stream.JsonGenerator;
 import java.io.*;
 import java.util.HashMap;
@@ -18,15 +16,21 @@ public class WritingJson {
                 .add("name", "Duke")
                 .add("age", 42)
                 .add("skills",
-                            Json.createArrayBuilder()
-                                    .add("Java SE")
-                                    .add("Java EE").
-                                    build())
+                        Json.createArrayBuilder()
+                                .add("Java SE")
+                                .add("Java EE").
+                                build())
                 .add("address",
-                            Json.createObjectBuilder()
-                                    .add("street", "Mainstreet")
-                                    .add("city", "Jakarta")
-                                    .build())
+                        Json.createObjectBuilder()
+                                .add("street", "Mainstreet")
+                                .add("city", "Jakarta")
+                                .build())
+                .build();
+
+        JsonArray jsonArray = Json.createArrayBuilder()
+                .add("foo")
+                .add("bar")
+                .add("duke")
                 .build();
 
         System.out.println(json);
@@ -39,21 +43,21 @@ public class WritingJson {
         config.put(JsonGenerator.PRETTY_PRINTING, true);
 
         JsonWriterFactory writerFactory = Json.createWriterFactory(config);
-        try(Writer writer = new StringWriter()) {
-            writerFactory.createWriter(writer).write(json);
-            System.out.println(writer.toString());
+        try (Writer stringWriter = new StringWriter();
+             JsonWriter jsonWriter = writerFactory.createWriter(stringWriter)) {
+            jsonWriter.write(json);
+            System.out.println(stringWriter);
         }
     }
 
-    private void prettyPrintJsonToFile(JsonObject json){
+    private void prettyPrintJsonToFile(JsonObject json) throws IOException {
         Map<String, Boolean> config = new HashMap<>();
         config.put(JsonGenerator.PRETTY_PRINTING, true);
 
         JsonWriterFactory writerFactory = Json.createWriterFactory(config);
-        try(Writer writer = new FileWriter("C:\\Development\\outputJson.json")) {
-            writerFactory.createWriter(writer).write(json);
-        } catch (IOException e) {
-            e.printStackTrace();
+        try (OutputStream outputStream = new FileOutputStream(new File("/tmp/output.json"));
+             JsonWriter jsonWriter = writerFactory.createWriter(outputStream)) {
+            jsonWriter.write(json);
         }
     }
 }

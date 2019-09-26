@@ -19,50 +19,51 @@ public class StreamingJson {
     }
 
     private void parseJson() {
-        final String jsonString = "{\"name\":\"duke\",\"isRetired\":false,\"age\":42,\"skills\":[\"Java SE\", \"Java EE\"]}";
-        final JsonParser parser = Json.createParser(new StringReader(jsonString));
-        while (parser.hasNext()) {
-            final Event event = parser.next();
-            switch (event) {
-                case START_ARRAY:
-                    System.out.println("Start of array");
-                    break;
-                case END_ARRAY:
-                    System.out.println("End of array");
-                    break;
-                case KEY_NAME:
-                    System.out.println("Key found " + parser.getString());
-                    break;
-                case VALUE_STRING:
-                    System.out.println("Value found " + parser.getString());
-                    break;
-                case VALUE_NUMBER:
-                    System.out.println("Number found " + parser.getLong());
-                    break;
-                case VALUE_TRUE:
-                    System.out.println(true);
-                    break;
-                case VALUE_FALSE:
-                    System.out.println(false);
-                    break;
+        String jsonString = "{\"name\":\"duke\",\"isRetired\":false,\"age\":42,\"skills\":[\"Java SE\", \"Java EE\"]}";
+        try (JsonParser parser = Json.createParser(new StringReader(jsonString))) {
+            while (parser.hasNext()) {
+                final Event event = parser.next();
+                switch (event) {
+                    case START_ARRAY:
+                        System.out.println("Start of array");
+                        break;
+                    case END_ARRAY:
+                        System.out.println("End of array");
+                        break;
+                    case KEY_NAME:
+                        System.out.println("Key found " + parser.getString());
+                        break;
+                    case VALUE_STRING:
+                        System.out.println("Value found " + parser.getString());
+                        break;
+                    case VALUE_NUMBER:
+                        System.out.println("Number found " + parser.getLong());
+                        break;
+                    case VALUE_TRUE:
+                        System.out.println(true);
+                        break;
+                    case VALUE_FALSE:
+                        System.out.println(false);
+                        break;
+                }
             }
         }
-        parser.close();
     }
 
     private void generateJson() {
         StringWriter stringWriter = new StringWriter();
-        JsonGenerator gen = Json.createGenerator(stringWriter);
 
-        gen.writeStartArray()
-                .writeStartObject()
-                .write("name", "duke")
-                .writeEnd()
-                .writeStartObject()
-                .write("name", "jakarta")
-                .writeEnd()
-                .writeEnd();
-        gen.flush();
+        try (JsonGenerator jsonGenerator = Json.createGenerator(stringWriter)) {
+            jsonGenerator.writeStartArray()
+                    .writeStartObject()
+                    .write("name", "duke")
+                    .writeEnd()
+                    .writeStartObject()
+                    .write("name", "jakarta")
+                    .writeEnd()
+                    .writeEnd();
+            jsonGenerator.flush();
+        }
 
         System.out.println(stringWriter.toString());
     }

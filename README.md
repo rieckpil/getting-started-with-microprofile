@@ -10,8 +10,8 @@ Repository for the [YouTube series](https://www.youtube.com/watch?v=0h3QceSBBiY&
 
 * **CDI**: [YouTube Video] - [Blog post] - [Source code](https://github.com/rieckpil/getting-started-with-eclipse-microprofile/tree/master/cdi)
 * **JAX-RS**: [YouTube Video] - [Blog post] - [Source code](https://github.com/rieckpil/getting-started-with-eclipse-microprofile/tree/master/jax-rs)
-* **JSON-B**: [YouTube Video] - [Blog post] - [Source code](https://github.com/rieckpil/getting-started-with-eclipse-microprofile/tree/master/json-b)
-* **JSON-P**: [YouTube Video] - [Blog post] - [Source code](https://github.com/rieckpil/getting-started-with-eclipse-microprofile/tree/master/json-p)
+* **JSON-B**: [YouTube Video] - [Blog post](https://rieckpil.de/whatis-json-processing-json-b/) - [Source code](https://github.com/rieckpil/getting-started-with-eclipse-microprofile/tree/master/json-b)
+* **JSON-P**: [YouTube Video] - [Blog post](https://rieckpil.de/whatis-json-processing-json-p/) - [Source code](https://github.com/rieckpil/getting-started-with-eclipse-microprofile/tree/master/json-p)
 * **MicroProfile Config**: [YouTube Video](https://youtu.be/0h3QceSBBiY) - [Blog post](https://rieckpil.de/whatis-eclipse-microprofile-config/) - [Source code](https://github.com/rieckpil/getting-started-with-eclipse-microprofile/tree/master/microprofile-config)
 * **MicroProfile Fault Tolerance**: [YouTube Video] - [Blog post](https://rieckpil.de/whatis-eclipse-microprofile-fault-tolerance/) - [Source code](https://github.com/rieckpil/getting-started-with-eclipse-microprofile/tree/master/microprofile-fault-tolerance)
 * **MicroProfile Metrics**: [YouTube Video](https://www.youtube.com/watch?v=jI6DoNYVd-U) - [Blog post](https://rieckpil.de/whatis-eclipse-microprofile-metrics/) - [Source code](https://github.com/rieckpil/getting-started-with-eclipse-microprofile/tree/master/microprofile-metrics)

@@ -1,6 +1,7 @@
 package de.rieckpil.blog;
 
 import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 import javax.json.JsonObject;
 import javax.ws.rs.*;
 import javax.ws.rs.client.Client;
@@ -14,6 +15,7 @@ import java.util.concurrent.TimeUnit;
 public class QuoteResource {
 
     private WebTarget quotesApiTarget;
+    private Client client;
 
     @PostConstruct
     public void initClient() {
@@ -23,9 +25,14 @@ public class QuoteResource {
         clientBuilder.readTimeout(5, TimeUnit.SECONDS);
         clientBuilder.register(UserAgentClientFilter.class);
         clientBuilder.register(ClientLoggingResponseFilter.class);
-        Client client = clientBuilder.build();
 
+        this.client = clientBuilder.build();
         this.quotesApiTarget = client.target("https://quotes.rest").path("qod");
+    }
+
+    @PreDestroy
+    public void tearDown() {
+        this.client.close();
     }
 
     @GET

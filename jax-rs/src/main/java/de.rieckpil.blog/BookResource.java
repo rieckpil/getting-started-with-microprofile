@@ -17,7 +17,7 @@ public class BookResource {
 
     @PostConstruct
     public void init() {
-        this.bookStore =  new ArrayList<>();
+        this.bookStore = new ArrayList<>();
         this.bookStore.add(new Book(1L, "Java 11", "Duke"));
         this.bookStore.add(new Book(2L, "Java 12", "Duke"));
         this.bookStore.add(new Book(3L, "Java 13", "Duke"));
@@ -33,7 +33,7 @@ public class BookResource {
     @GET
     @Path("async")
     public void getBooksAsync(@Suspended final AsyncResponse asyncResponse) {
-        // do long running task
+        // do long-running task with e.g. @Asynchronous annotation of MicroProfile Fault Tolerance or from EJB
         asyncResponse.resume(this.bookStore);
     }
 
@@ -46,7 +46,7 @@ public class BookResource {
                 .filter(b -> b.getTitle().contains(title))
                 .findFirst().orElse(null);
 
-        if(requestedBook == null) {
+        if (requestedBook == null) {
             return Response.status(Response.Status.NOT_FOUND).build();
         }
 
@@ -54,7 +54,7 @@ public class BookResource {
     }
 
     @POST
-    public Response getBookById(Book bookToStore, @Context UriInfo uriInfo) {
+    public Response createNewBook(Book bookToStore, @Context UriInfo uriInfo) {
         this.bookStore.add(bookToStore);
         UriBuilder builder = uriInfo.getAbsolutePathBuilder();
         builder.path(bookToStore.getId().toString());
@@ -63,7 +63,7 @@ public class BookResource {
 
     @DELETE
     @Path("/{id}")
-    public Response deleteBook(@PathParam("id") Long id) {
+    public Response deleteBook(@PathParam("id") Long id, @HeaderParam("User-Agent") String userAgent) {
         this.bookStore.remove(id);
         return Response.noContent().build();
     }

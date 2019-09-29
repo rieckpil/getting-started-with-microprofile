@@ -2,6 +2,7 @@ package de.rieckpil.blog;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
+import javax.json.Json;
 import javax.json.JsonObject;
 import javax.ws.rs.*;
 import javax.ws.rs.client.Client;
@@ -9,6 +10,7 @@ import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import java.util.concurrent.CompletionStage;
 import java.util.concurrent.TimeUnit;
 
 @Path("quotes")
@@ -20,11 +22,11 @@ public class QuoteResource {
     @PostConstruct
     public void initClient() {
 
-        ClientBuilder clientBuilder = ClientBuilder.newBuilder();
-        clientBuilder.connectTimeout(5, TimeUnit.SECONDS);
-        clientBuilder.readTimeout(5, TimeUnit.SECONDS);
-        clientBuilder.register(UserAgentClientFilter.class);
-        clientBuilder.register(ClientLoggingResponseFilter.class);
+        ClientBuilder clientBuilder = ClientBuilder.newBuilder()
+                .connectTimeout(5, TimeUnit.SECONDS)
+                .readTimeout(5, TimeUnit.SECONDS)
+                .register(UserAgentClientFilter.class)
+                .register(ClientLoggingResponseFilter.class);
 
         this.client = clientBuilder.build();
         this.quotesApiTarget = client.target("https://quotes.rest").path("qod");
@@ -41,7 +43,16 @@ public class QuoteResource {
 
         JsonObject quoteApiResult = this.quotesApiTarget
                 .request()
+                .header("X-Foo", "bar")
                 .accept(MediaType.APPLICATION_JSON)
+                .get()
+                .readEntity(JsonObject.class);
+
+        CompletionStage<JsonObject> rxQuoteApiResult = this.quotesApiTarget
+                .request()
+                .header("X-Foo", "bar")
+                .accept(MediaType.APPLICATION_JSON)
+                .rx()
                 .get(JsonObject.class);
 
         String quote = quoteApiResult

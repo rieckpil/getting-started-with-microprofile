@@ -24,11 +24,11 @@ public class PostService {
 
     public void init(@Observes @Initialized(ApplicationScoped.class) Object init) throws URISyntaxException {
         restClientBuilderExample();
-        getAllPosts();
-        getSinglePost();
-        createNewPost();
-        updateExistingPost();
-        deletePost();
+        // getAllPosts();
+        // getSinglePost();
+        // createNewPost();
+        // updateExistingPost();
+        // deletePost();
     }
 
     private void restClientBuilderExample() throws URISyntaxException {

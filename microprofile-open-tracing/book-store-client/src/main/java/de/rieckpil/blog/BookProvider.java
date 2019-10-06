@@ -1,6 +1,7 @@
 package de.rieckpil.blog;
 
 import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.json.Json;
@@ -11,6 +12,7 @@ import javax.json.stream.JsonCollectors;
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.WebTarget;
+import javax.ws.rs.core.MediaType;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -22,10 +24,11 @@ public class BookProvider {
     private PriceCalculator priceCalculator;
 
     private WebTarget bookStoreTarget;
+    private Client client;
 
     @PostConstruct
     public void setup() {
-        Client client = ClientBuilder
+        this.client = ClientBuilder
                 .newBuilder()
                 .connectTimeout(2, TimeUnit.SECONDS)
                 .readTimeout(2, TimeUnit.SECONDS)
@@ -38,6 +41,7 @@ public class BookProvider {
 
         JsonArray books = this.bookStoreTarget
                 .request()
+                .accept(MediaType.APPLICATION_JSON)
                 .get()
                 .readEntity(JsonArray.class);
 
@@ -53,5 +57,10 @@ public class BookProvider {
         return result
                 .stream()
                 .collect(JsonCollectors.toJsonArray());
+    }
+
+    @PreDestroy
+    public void tearDown() {
+        this.client.close();
     }
 }

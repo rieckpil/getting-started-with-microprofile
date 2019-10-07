@@ -26,29 +26,20 @@ public class BookService {
     @Inject
     private CustomerAccount customerAccount;
 
-    @Inject
-    private Event<BookRequest> bookRequestEvent;
-
     public void init(@Observes @Initialized(ApplicationScoped.class) Object init) {
-        // paymentProvider.withdrawMoneyFromCustomer("Duke", 123);
-        // paymentProvider.withdrawMoneyFromCustomer("Mike", 123);
+        this.paymentProvider.withdrawMoneyFromCustomer("Duke", 123);
+        this.paymentProvider.withdrawMoneyFromCustomer("Mike", 123);
 
-        // this.storeBook("Java 11", "12345");
-        // this.storeBook("Java 12", "1234");
+        this.storeBook("Java 11", "123-3-42-133713-4");
+        this.storeBook("Java 42", "123-3-42-133713-");
 
-        // this.bookRequestEvent.fire(new BookRequest("MicroProfile 3.0", 1));
-        // this.bookRequestEvent.fireAsync(new BookRequest("MicroProfile 3.0", 1));
-
-        // this.customerAccount.withdrawMoney(42.0);
-        // this.customerAccount.withdrawMoney(142.0);
+        this.customerAccount.withdrawMoney(42.0);
+        this.customerAccount.withdrawMoney(142.0);
     }
 
     public void storeBook(String bookName, String isbn) {
-
         if (isbnValidator.validateIsbn(isbn)) {
             logger.info("Store book with name: " + bookName);
         }
-
     }
-
 }

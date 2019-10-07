@@ -1,10 +1,11 @@
 package de.rieckpil.blog.decorators;
 
+import javax.annotation.Priority;
 import javax.decorator.Decorator;
 import javax.decorator.Delegate;
 import javax.inject.Inject;
 
-// @Priority(1)
+@Priority(100)
 @Decorator
 public abstract class LargeWithdrawDecorator implements Account {
 
@@ -14,12 +15,11 @@ public abstract class LargeWithdrawDecorator implements Account {
 
     @Override
     public void withdrawMoney(Double amount) {
-
         if (amount >= 100.0) {
             System.out.println("A large amount of money gets withdrawn!!!");
+            // e.g. do further checks
         }
 
         account.withdrawMoney(amount);
-
     }
 }

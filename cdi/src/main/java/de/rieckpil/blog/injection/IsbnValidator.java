@@ -9,12 +9,10 @@ public class IsbnValidator {
     private Logger logger;
 
     public boolean validateIsbn(String isbn) {
-        if (isbn.length() < 5) {
+        if (isbn.replace("-", "").length() < 13) {
             logger.warning("ISBN validation failed for ISBN: " + isbn);
             return false;
         }
-
         return true;
     }
-
 }

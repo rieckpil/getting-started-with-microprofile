@@ -18,5 +18,4 @@ public class BookPaymentInterceptor {
 
         return ctx.proceed();
     }
-
 }

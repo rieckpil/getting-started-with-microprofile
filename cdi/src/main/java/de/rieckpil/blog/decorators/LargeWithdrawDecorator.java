@@ -1,12 +1,11 @@
 package de.rieckpil.blog.decorators;
 
-import javax.annotation.Priority;
 import javax.decorator.Decorator;
 import javax.decorator.Delegate;
 import javax.inject.Inject;
 
-@Priority(100)
 @Decorator
+// @Priority(100)
 public abstract class LargeWithdrawDecorator implements Account {
 
     @Inject
@@ -19,7 +18,6 @@ public abstract class LargeWithdrawDecorator implements Account {
             System.out.println("A large amount of money gets withdrawn!!!");
             // e.g. do further checks
         }
-
         account.withdrawMoney(amount);
     }
 }

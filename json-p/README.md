@@ -4,4 +4,4 @@
 * [Spec](https://javaee.github.io/jsonp/)
 * Current version: **1.1** in MicroProfile **3.0**
 * Detailed blog post about this specification: [#WHATIS?: JSON Processing (JSON-P)](https://rieckpil.de/whatis-json-processing-json-p/)
-* YouTube video about this specification: [Getting started with Eclipse MicroProfile 3.0 - JSON-P 1.1]()
+* YouTube video about this specification: [Getting started with Eclipse MicroProfile 3.0 - JSON-P 1.1](https://youtu.be/2H7z_MbWwDQ)

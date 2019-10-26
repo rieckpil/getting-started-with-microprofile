@@ -4,6 +4,8 @@ import javax.ws.rs.container.ContainerRequestContext;
 import javax.ws.rs.container.ContainerRequestFilter;
 import java.io.IOException;
 
+// uncomment to activate this evil filter ;)
+// @Provider
 public class HttpMethodModificationFilter implements ContainerRequestFilter {
 
     @Override

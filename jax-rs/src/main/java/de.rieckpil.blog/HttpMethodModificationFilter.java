@@ -7,7 +7,6 @@ import javax.ws.rs.ext.Provider;
 import java.io.IOException;
 
 @Provider
-@PreMatching
 public class HttpMethodModificationFilter implements ContainerRequestFilter {
 
     @Override

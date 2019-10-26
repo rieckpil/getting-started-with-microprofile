@@ -42,8 +42,7 @@ public class BookResource {
     public Response getBookById(@PathParam("id") Long id, @QueryParam("title") @DefaultValue("") String title) {
         Book requestedBook = this.bookStore
                 .stream()
-                .filter(b -> b.getId() == id)
-                .filter(b -> b.getTitle().contains(title))
+                .filter(b -> b.getId().equals(id))
                 .findFirst().orElse(null);
 
         if (requestedBook == null) {
@@ -67,6 +66,5 @@ public class BookResource {
         this.bookStore.remove(id);
         return Response.noContent().build();
     }
-
 }
 

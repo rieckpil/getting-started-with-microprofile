@@ -4,7 +4,7 @@
 
 Repository for the [YouTube series](https://www.youtube.com/watch?v=0h3QceSBBiY&list=PLFjB4VDnlT_3vXkrLkSBW7j6ygQRXBypA) *Getting started with Eclipse MicroProfile 3.0*
 
-[![Series logo](https://rieckpil.de/wp-content/uploads/2019/08/eclipseMicroProfileGettingStartedYouTubeSeriesLogo.png "Series Logo")](https://www.youtube.com/watch?v=0h3QceSBBiY&list=PLFjB4VDnlT_3vXkrLkSBW7j6ygQRXBypA)
+[![Series logo](https://rieckpil.de/wp-content/uploads/2019/11/gettingStartedWithEclipseMicroProfileYT_Full.png "Series Logo")](https://www.youtube.com/watch?v=0h3QceSBBiY&list=PLFjB4VDnlT_3vXkrLkSBW7j6ygQRXBypA)
 
 ## Specifications:
 

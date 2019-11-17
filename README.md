@@ -2,6 +2,11 @@
 
 [![Build Status](https://travis-ci.org/rieckpil/getting-started-with-eclipse-microprofile.svg?branch=master)](https://travis-ci.org/rieckpil/getting-started-with-eclipse-microprofile)
 
+Get the full Course Bundle [here](https://rieckpil.de/p/eclipse-microprofile-course-bundle).
+
+[![Bundle Logo](https://rieckpil.de/wp-content/uploads/2019/11/gettingStartedWithEclipseMicroProfileBundle-e1573245583433.png "Bundle Logo")](https://rieckpil.de/p/eclipse-microprofile-course-bundle)
+
+
 Repository for the [YouTube series](https://www.youtube.com/watch?v=0h3QceSBBiY&list=PLFjB4VDnlT_3vXkrLkSBW7j6ygQRXBypA) *Getting started with Eclipse MicroProfile 3.0*
 
 [![Series logo](https://rieckpil.de/wp-content/uploads/2019/11/gettingStartedWithEclipseMicroProfileYT_Full.png "Series Logo")](https://www.youtube.com/watch?v=0h3QceSBBiY&list=PLFjB4VDnlT_3vXkrLkSBW7j6ygQRXBypA)
@@ -23,7 +28,7 @@ Repository for the [YouTube series](https://www.youtube.com/watch?v=0h3QceSBBiY&
 
 ## Technologies used for this series:
 
-* **MicroProfile 3.0**
+* **MicroProfile 3.1**
 * **OpenLiberty 19.0.0.7**
 * **Java 11**
 * **Maven 3.6**
@@ -43,7 +48,7 @@ The following base `server.xml` configuration is used:
 <server description="new server">
 
     <featureManager>
-        <feature>microProfile-3.0</feature>
+        <feature>microProfile-3.1</feature>
     </featureManager>
 
     <mpMetrics authentication="false"/>
@@ -86,7 +91,7 @@ All MicroProfile example projects use the following parent `pom.xml`:
         <dependency>
             <groupId>org.eclipse.microprofile</groupId>
             <artifactId>microprofile</artifactId>
-            <version>3.0</version>
+            <version>3.1</version>
             <type>pom</type>
             <scope>provided</scope>
         </dependency>

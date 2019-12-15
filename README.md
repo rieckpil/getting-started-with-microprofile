@@ -1,6 +1,6 @@
 # Getting started with Eclipse MicroProfile 3.0 
 
-[![Build Status](https://travis-ci.org/rieckpil/getting-started-with-eclipse-microprofile.svg?branch=master)](https://travis-ci.org/rieckpil/getting-started-with-eclipse-microprofile)
+![](https://github.com/rieckpil/getting-started-with-eclipse-microprofile/workflows/Build%20Java/badge.svg)
 
 Get the full Course Bundle [here](https://rieckpil.de/p/eclipse-microprofile-course-bundle).
 

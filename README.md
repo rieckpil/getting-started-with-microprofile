@@ -2,10 +2,13 @@
 
 ![](https://github.com/rieckpil/getting-started-with-eclipse-microprofile/workflows/Build%20Java/badge.svg)
 
-Get the full Course Bundle [here](https://rieckpil.de/p/eclipse-microprofile-course-bundle).
+» Get the full Course Bundle [here](https://rieckpil.de/p/eclipse-microprofile-course-bundle).
 
-[![Bundle Logo](https://rieckpil.de/wp-content/uploads/2019/11/gettingStartedWithEclipseMicroProfileBundle-e1573245583433.png "Bundle Logo")](https://rieckpil.de/p/eclipse-microprofile-course-bundle)
-
+<p align="center">
+  <a href="https://rieckpil.de/p/eclipse-microprofile-course-bundle">
+    <img src="https://rieckpil.de/wp-content/uploads/2019/11/gettingStartedWithEclipseMicroProfileBundle-e1573245583433.png" alt=" Bundle Logo"/>
+  </a>
+</p>
 
 Repository for the [YouTube series](https://www.youtube.com/watch?v=0h3QceSBBiY&list=PLFjB4VDnlT_3vXkrLkSBW7j6ygQRXBypA) *Getting started with Eclipse MicroProfile*
 

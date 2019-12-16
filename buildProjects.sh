@@ -4,7 +4,7 @@ set -e
 set -o pipefail
 
 declare -a arr=(
- "cdi" 
+ "cdi"
  "jax-rs"
  "json-b"
  "json-p"
@@ -21,5 +21,5 @@ declare -a arr=(
 
 for project in "${arr[@]}"
 do
-   mvn -B -f $project/pom.xml package
+   mvn -B -f $project/pom.xml verify
 done

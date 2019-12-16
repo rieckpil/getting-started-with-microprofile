@@ -2,7 +2,7 @@
 <server description="new server">
 
     <featureManager>
-        <feature>microProfile-3.1</feature>
+        <feature>microProfile-3.2</feature>
         <feature>usr:opentracingZipkin-0.31</feature>
     </featureManager>
 

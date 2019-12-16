@@ -1,6 +1,6 @@
 # Getting started with Eclipse MicroProfile
 
-![](https://github.com/rieckpil/getting-started-with-eclipse-microprofile/workflows/Build%20Java/badge.svg)
+[![](https://github.com/rieckpil/getting-started-with-eclipse-microprofile/workflows/Build%20Java/badge.svg)](https://github.com/rieckpil/getting-started-with-eclipse-microprofile/actions)
 
 » Get the full Course Bundle [here](https://rieckpil.de/p/eclipse-microprofile-course-bundle).
 
@@ -31,14 +31,14 @@ Repository for the [YouTube series](https://www.youtube.com/watch?v=0h3QceSBBiY&
 
 ## Technologies used for this series:
 
-* **MicroProfile 3.1**
-* **OpenLiberty 19.0.0.10**
+* **MicroProfile 3.2**
+* **OpenLiberty 19.0.0.12**
 * **Java 11**
 * **Maven 3.6**
 * **WAD** (Watch and Deploy) from [Adam Bien](https://wad.sh/) ([setup](https://rieckpil.de/review-improved-java-jakarta-ee-productivity-with-adam-biens-wad-watch-and-deploy/))
 * **JWTENIZR** from [Adam Bien](http://jwtenizr.sh/)
 
-## Start the example applications 
+## Start the example applications
 
 Each subfolder contains a `buildAndRun.sh` (Linux/Mac) and `buildAndRun.bat` (Windows) file to build and start the application on your machine using **Docker**. You just need **Java 11** and **Maven** installed and a running Docker daemon to start everything. Once the application is up- and running, you can visit http://localhost:9080 to access it (if any JAX-RS endpoint is available in the project).
 
@@ -51,7 +51,7 @@ The following base `server.xml` configuration is used:
 <server description="new server">
 
     <featureManager>
-        <feature>microProfile-3.1</feature>
+        <feature>microProfile-3.2</feature>
     </featureManager>
 
     <mpMetrics authentication="false"/>
@@ -94,7 +94,7 @@ All MicroProfile example projects use the following parent `pom.xml`:
         <dependency>
             <groupId>org.eclipse.microprofile</groupId>
             <artifactId>microprofile</artifactId>
-            <version>3.1</version>
+            <version>${microprofile.version}</version>
             <type>pom</type>
             <scope>provided</scope>
         </dependency>
@@ -102,6 +102,7 @@ All MicroProfile example projects use the following parent `pom.xml`:
 
     <properties>
         <java.version>11</java.version>
+        <microprofile.version>3.2</microprofile.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -114,12 +115,43 @@ All MicroProfile example projects use the following parent `pom.xml`:
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
                 <version>3.2.3</version>
-		<configuration>
-			<failOnMissingWebXml>false</failOnMissingWebXml>
-		</configuration>
+                <configuration>
+                    <failOnMissingWebXml>false</failOnMissingWebXml>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>io.openliberty.tools</groupId>
+                <artifactId>liberty-maven-plugin</artifactId>
+                <version>3.1</version>
+                <configuration>
+                    <serverXmlFile>../server.xml</serverXmlFile>
+                </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>3.1.0</version>
+                <executions>
+                    <execution>
+                        <id>copy-resources</id>
+                        <phase>validate</phase>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${project.basedir}/target</outputDirectory>
+                            <resources>
+                                <resource>
+                                    <directory>../</directory>
+                                    <includes>
+                                        <include>server.xml</include>
+                                    </includes>
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
-
 </project>
 ```

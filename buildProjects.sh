@@ -1,4 +1,8 @@
 #!/bin/bash
+
+set -e
+set -o pipefail
+
 declare -a arr=(
  "cdi" 
  "jax-rs"

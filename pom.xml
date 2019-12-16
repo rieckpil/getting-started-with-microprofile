@@ -41,11 +41,11 @@
     <microprofile.version>3.2</microprofile.version>
     <junit-jupiter.version>5.5.0</junit-jupiter.version>
     <microshed-testing.version>0.6.1.1</microshed-testing.version>
+    <slf4j-log4j12.version>1.7.29</slf4j-log4j12.version>
     <maven.compiler.source>${java.version}</maven.compiler.source>
     <maven.compiler.target>${java.version}</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    <slf4j-log4j12.version>1.7.29</slf4j-log4j12.version>
   </properties>
 
   <build>

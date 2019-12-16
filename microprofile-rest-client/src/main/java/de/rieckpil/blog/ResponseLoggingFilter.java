@@ -7,8 +7,8 @@ import java.io.IOException;
 
 public class ResponseLoggingFilter implements ClientResponseFilter {
 
-    @Override
-    public void filter(ClientRequestContext clientRequestContext, ClientResponseContext clientResponseContext) throws IOException {
-        System.out.println("Status code is: " + clientResponseContext.getStatus());
-    }
+  @Override
+  public void filter(ClientRequestContext clientRequestContext, ClientResponseContext clientResponseContext) throws IOException {
+    System.out.println("Status code is: " + clientResponseContext.getStatus());
+  }
 }

@@ -15,6 +15,5 @@ public class ApplicationIT {
 
   @Test
   public void testApplicationStarts() {
-
   }
 }

@@ -21,5 +21,5 @@ declare -a arr=(
 
 for project in "${arr[@]}"
 do
-   mvn -B -f $project/pom.xml verify
+   mvn -B -f $project/pom.xml clean verify
 done

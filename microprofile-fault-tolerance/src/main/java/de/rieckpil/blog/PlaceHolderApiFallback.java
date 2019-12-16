@@ -8,11 +8,11 @@ import javax.json.JsonObject;
 
 public class PlaceHolderApiFallback implements FallbackHandler<JsonObject> {
 
-    @Override
-    public JsonObject handle(ExecutionContext context) {
-        return Json.createObjectBuilder()
-                .add("comment", "Lorem ipsum")
-                .add("postId", Long.valueOf(context.getParameters()[0].toString()))
-                .build();
-    }
+  @Override
+  public JsonObject handle(ExecutionContext context) {
+    return Json.createObjectBuilder()
+      .add("comment", "Lorem ipsum")
+      .add("postId", Long.valueOf(context.getParameters()[0].toString()))
+      .build();
+  }
 }

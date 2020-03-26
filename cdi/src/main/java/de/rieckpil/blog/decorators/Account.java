@@ -2,7 +2,7 @@ package de.rieckpil.blog.decorators;
 
 public interface Account {
 
-    Double getBalance();
+  Double getBalance();
 
-    void withdrawMoney(Double amount);
+  void withdrawMoney(Double amount);
 }

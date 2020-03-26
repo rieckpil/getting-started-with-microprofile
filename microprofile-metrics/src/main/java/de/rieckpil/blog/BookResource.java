@@ -34,7 +34,7 @@ public class BookResource {
   @SimplyTimed
   @Path("/microprofile")
   @Produces(MediaType.TEXT_PLAIN)
-  public Response getBook() throws InterruptedException {
+  public Response getMicroProfileBook() throws InterruptedException {
     Thread.sleep(ThreadLocalRandom.current().nextLong(100, 1000));
     return Response.ok("Getting Started With Eclipse MicroProfile").build();
   }

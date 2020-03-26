@@ -21,30 +21,30 @@ import java.security.Principal;
 @Produces(MediaType.APPLICATION_JSON)
 public class BookResource {
 
-    @Inject
-    private Principal principal;
+  @Inject
+  private Principal principal;
 
-    @Inject
-    private JsonWebToken jsonWebToken;
+  @Inject
+  private JsonWebToken jsonWebToken;
 
-    @Inject
-    @Claim("administrator_id")
-    private JsonNumber administrator_id;
+  @Inject
+  @Claim("administrator_id")
+  private JsonNumber administrator_id;
 
-    @GET
-    @RolesAllowed("admin")
-    public Response getBook() {
+  @GET
+  @RolesAllowed("admin")
+  public Response getBook() {
 
-        System.out.println("Secret book for " + principal.getName() + " with roles " + jsonWebToken.getGroups());
-        System.out.println("Administrator level: " + jsonWebToken.getClaim("administrator_level").toString());
-        System.out.println("Administrator id: " + administrator_id);
+    System.out.println("Secret book for " + principal.getName() + " with roles " + jsonWebToken.getGroups());
+    System.out.println("Administrator level: " + jsonWebToken.getClaim("administrator_level").toString());
+    System.out.println("Administrator id: " + administrator_id);
 
-        JsonObject secretBook = Json.createObjectBuilder()
-                .add("title", "secret")
-                .add("author", "duke")
-                .build();
+    JsonObject secretBook = Json.createObjectBuilder()
+      .add("title", "secret")
+      .add("author", "duke")
+      .build();
 
-        return Response.ok(secretBook).build();
-    }
+    return Response.ok(secretBook).build();
+  }
 
 }

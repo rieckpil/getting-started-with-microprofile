@@ -11,16 +11,16 @@ import java.time.LocalDate;
 @ApplicationScoped
 public class ObjectMapping {
 
-    public void init(@Observes @Initialized(ApplicationScoped.class) Object init) {
+  public void init(@Observes @Initialized(ApplicationScoped.class) Object init) {
 
-        Book book = new Book("Java 11", LocalDate.now(), 1, false, "Duke", new BigDecimal(44.444));
+    Book book = new Book("Java 11", LocalDate.now(), 1, false, "Duke", new BigDecimal(44.444));
 
-        Jsonb jsonb = JsonbBuilder.create();
+    Jsonb jsonb = JsonbBuilder.create();
 
-        String resultJson = jsonb.toJson(book);
-        System.out.println(resultJson);
+    String resultJson = jsonb.toJson(book);
+    System.out.println(resultJson);
 
-        Book serializedBook = jsonb.fromJson(resultJson, Book.class);
-        System.out.println(serializedBook.toString());
-    }
+    Book serializedBook = jsonb.fromJson(resultJson, Book.class);
+    System.out.println(serializedBook.toString());
+  }
 }

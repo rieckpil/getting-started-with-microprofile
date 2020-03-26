@@ -8,12 +8,12 @@ import java.io.IOException;
 // @Provider
 public class HttpMethodModificationFilter implements ContainerRequestFilter {
 
-    @Override
-    public void filter(ContainerRequestContext requestContext) throws IOException {
+  @Override
+  public void filter(ContainerRequestContext requestContext) throws IOException {
 
-        if(requestContext.getMethod().equalsIgnoreCase("DELETE")) {
-            requestContext.setMethod("GET");
-        }
-
+    if (requestContext.getMethod().equalsIgnoreCase("DELETE")) {
+      requestContext.setMethod("GET");
     }
+
+  }
 }

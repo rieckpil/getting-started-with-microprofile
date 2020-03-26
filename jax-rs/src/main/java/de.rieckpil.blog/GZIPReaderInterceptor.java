@@ -9,10 +9,10 @@ import java.util.zip.GZIPInputStream;
 
 public class GZIPReaderInterceptor implements ReaderInterceptor {
 
-    @Override
-    public Object aroundReadFrom(ReaderInterceptorContext context) throws IOException, WebApplicationException {
-        final InputStream originalInputStream = context.getInputStream();
-        context.setInputStream(new GZIPInputStream(originalInputStream));
-        return context.proceed();
-    }
+  @Override
+  public Object aroundReadFrom(ReaderInterceptorContext context) throws IOException, WebApplicationException {
+    final InputStream originalInputStream = context.getInputStream();
+    context.setInputStream(new GZIPInputStream(originalInputStream));
+    return context.proceed();
+  }
 }

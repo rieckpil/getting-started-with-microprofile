@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="http://xmlns.jcp.org/xml/ns/javaee"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns="http://xmlns.jcp.org/xml/ns/javaee"
        xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/beans_1_1.xsd"
        bean-discovery-mode="all">
-    <interceptors>
-        <class>de.rieckpil.blog.interceptors.BookPaymentInterceptor</class>
-    </interceptors>
-    <decorators>
-        <class>de.rieckpil.blog.decorators.LargeWithdrawDecorator</class>
-    </decorators>
+  <interceptors>
+    <class>de.rieckpil.blog.interceptors.BookPaymentInterceptor</class>
+  </interceptors>
+  <decorators>
+    <class>de.rieckpil.blog.decorators.LargeWithdrawDecorator</class>
+  </decorators>
 </beans>

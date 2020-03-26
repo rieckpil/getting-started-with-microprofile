@@ -11,22 +11,22 @@ import java.io.StringReader;
 
 public class ReadingJson {
 
-    public void init(@Observes @Initialized(ApplicationScoped.class) Object init) {
-        readFromString();
-        readFromFile();
-    }
+  public void init(@Observes @Initialized(ApplicationScoped.class) Object init) {
+    readFromString();
+    readFromFile();
+  }
 
-    private void readFromString() {
-        JsonReader jsonReader = Json.createReader(
-                new StringReader("{\"name\":\"duke\",\"age\":42,\"skills\":[\"Java SE\", \"Java EE\"]}"));
-        JsonObject jsonObject = jsonReader.readObject();
-        System.out.println(jsonObject);
-    }
+  private void readFromString() {
+    JsonReader jsonReader = Json.createReader(
+      new StringReader("{\"name\":\"duke\",\"age\":42,\"skills\":[\"Java SE\", \"Java EE\"]}"));
+    JsonObject jsonObject = jsonReader.readObject();
+    System.out.println(jsonObject);
+  }
 
-    private void readFromFile() {
-        JsonReader jsonReader = Json.createReader(this.getClass().getClassLoader()
-                .getResourceAsStream("books.json"));
-        JsonArray jsonArray = jsonReader.readArray();
-        System.out.println(jsonArray);
-    }
+  private void readFromFile() {
+    JsonReader jsonReader = Json.createReader(this.getClass().getClassLoader()
+      .getResourceAsStream("books.json"));
+    JsonArray jsonArray = jsonReader.readArray();
+    System.out.println(jsonArray);
+  }
 }

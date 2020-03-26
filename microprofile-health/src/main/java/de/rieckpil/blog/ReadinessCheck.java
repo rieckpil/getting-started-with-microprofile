@@ -7,11 +7,11 @@ import org.eclipse.microprofile.health.Readiness;
 @Readiness
 public class ReadinessCheck implements HealthCheck {
 
-    @Override
-    public HealthCheckResponse call() {
-        return HealthCheckResponse.builder()
-                .name("readiness")
-                .up()
-                .build();
-    }
+  @Override
+  public HealthCheckResponse call() {
+    return HealthCheckResponse.builder()
+      .name("readiness")
+      .up()
+      .build();
+  }
 }

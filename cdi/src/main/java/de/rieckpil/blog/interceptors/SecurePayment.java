@@ -1,7 +1,6 @@
 package de.rieckpil.blog.interceptors;
 
 import javax.interceptor.InterceptorBinding;
-
 import java.lang.annotation.Retention;
 import java.lang.annotation.Target;
 

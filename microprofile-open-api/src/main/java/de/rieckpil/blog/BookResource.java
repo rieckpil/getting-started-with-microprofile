@@ -16,39 +16,39 @@ import javax.ws.rs.core.UriInfo;
 @Path("books")
 public class BookResource {
 
-    @GET
-    @Operation(summary = "Get all books", description = "Returns all available books of the book store XYZ")
-    @APIResponse(responseCode = "404", description = "No books found")
-    @APIResponse(responseCode = "418", description = "I'm a teapot")
-    @APIResponse(responseCode = "500", description = "Server unavailable")
-    @Tag(name = "BETA", description = "This API is currently in beta state")
-    @Produces(MediaType.APPLICATION_JSON)
-    public Response getAllBooks() {
-        System.out.println("Get all books...");
-        return Response.ok(new Book("MicroProfile", "Duke", 1L)).build();
-    }
+  @GET
+  @Operation(summary = "Get all books", description = "Returns all available books of the book store XYZ")
+  @APIResponse(responseCode = "404", description = "No books found")
+  @APIResponse(responseCode = "418", description = "I'm a teapot")
+  @APIResponse(responseCode = "500", description = "Server unavailable")
+  @Tag(name = "BETA", description = "This API is currently in beta state")
+  @Produces(MediaType.APPLICATION_JSON)
+  public Response getAllBooks() {
+    System.out.println("Get all books...");
+    return Response.ok(new Book("MicroProfile", "Duke", 1L)).build();
+  }
 
-    @GET
-    @APIResponse(description = "Book",
-            content = @Content(mediaType = "application/json",
-                    schema = @Schema(implementation = Book.class)))
-    @Path("/{id}")
-    @Consumes({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
-    public Response getBookById(@PathParam("id") Long id) {
-        System.out.println("Get book by id...");
-        return Response.ok(new Book("MicroProfile", "Duke", 1L)).build();
-    }
+  @GET
+  @APIResponse(description = "Book",
+    content = @Content(mediaType = "application/json",
+      schema = @Schema(implementation = Book.class)))
+  @Path("/{id}")
+  @Consumes({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
+  public Response getBookById(@PathParam("id") Long id) {
+    System.out.println("Get book by id...");
+    return Response.ok(new Book("MicroProfile", "Duke", 1L)).build();
+  }
 
-    @POST
-    public Response createNewBook(JsonObject jsonObject, @Context UriInfo uriInfo) {
-        System.out.println("Creating new book...");
-        return Response.created(uriInfo.getAbsolutePathBuilder().build()).build();
-    }
+  @POST
+  public Response createNewBook(JsonObject jsonObject, @Context UriInfo uriInfo) {
+    System.out.println("Creating new book...");
+    return Response.created(uriInfo.getAbsolutePathBuilder().build()).build();
+  }
 
-    @DELETE
-    @Path("/{id}")
-    public Response deleteBookById(@PathParam("id") Long id) {
-        System.out.println("Deleting book...");
-        return Response.noContent().build();
-    }
+  @DELETE
+  @Path("/{id}")
+  public Response deleteBookById(@PathParam("id") Long id) {
+    System.out.println("Deleting book...");
+    return Response.noContent().build();
+  }
 }

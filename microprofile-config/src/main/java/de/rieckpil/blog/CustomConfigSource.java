@@ -10,34 +10,34 @@ import java.util.Map;
 //config source to search in META-INF/microprofile-config.properties (ordinal=100)
 public class CustomConfigSource implements ConfigSource {
 
-    public static final String CUSTOM_PASSWORD = "CUSTOM_PASSWORD";
-    public static final String MESSAGE = "Hello from custom ConfigSource";
+  public static final String CUSTOM_PASSWORD = "CUSTOM_PASSWORD";
+  public static final String MESSAGE = "Hello from custom ConfigSource";
 
-    @Override
-    public int getOrdinal() {
-        return 500;
-    }
+  @Override
+  public int getOrdinal() {
+    return 500;
+  }
 
-    @Override
-    public Map<String, String> getProperties() {
-        Map<String, String> properties = new HashMap<>();
-        properties.put("my.app.password", CUSTOM_PASSWORD);
-        properties.put("message", MESSAGE);
-        return properties;
-    }
+  @Override
+  public Map<String, String> getProperties() {
+    Map<String, String> properties = new HashMap<>();
+    properties.put("my.app.password", CUSTOM_PASSWORD);
+    properties.put("message", MESSAGE);
+    return properties;
+  }
 
-    @Override
-    public String getValue(String key) {
-        if (key.equalsIgnoreCase("my.app.password")) {
-            return CUSTOM_PASSWORD;
-        } else if (key.equalsIgnoreCase("message")) {
-            return MESSAGE;
-        }
-        return null;
+  @Override
+  public String getValue(String key) {
+    if (key.equalsIgnoreCase("my.app.password")) {
+      return CUSTOM_PASSWORD;
+    } else if (key.equalsIgnoreCase("message")) {
+      return MESSAGE;
     }
+    return null;
+  }
 
-    @Override
-    public String getName() {
-        return "randomConfigSource";
-    }
+  @Override
+  public String getName() {
+    return "randomConfigSource";
+  }
 }

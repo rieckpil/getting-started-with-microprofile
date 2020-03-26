@@ -9,15 +9,15 @@ import org.eclipse.microprofile.health.Readiness;
 @Liveness
 public class MultipleHealthCheck implements HealthCheck {
 
-    @Override
-    public HealthCheckResponse call() {
-        return HealthCheckResponse
-                .builder()
-                .name("generalCheck")
-                .withData("foo", "bar")
-                .withData("uptime", 42)
-                .withData("isReady", true)
-                .up()
-                .build();
-    }
+  @Override
+  public HealthCheckResponse call() {
+    return HealthCheckResponse
+      .builder()
+      .name("generalCheck")
+      .withData("foo", "bar")
+      .withData("uptime", 42)
+      .withData("isReady", true)
+      .up()
+      .build();
+  }
 }

@@ -9,9 +9,9 @@ import java.io.IOException;
 @Provider
 public class ClientLoggingResponseFilter implements ClientResponseFilter {
 
-    @Override
-    public void filter(ClientRequestContext requestContext, ClientResponseContext responseContext) throws IOException {
-        System.out.println("Response filter for JAX-RS Client");
-        responseContext.getHeaders().forEach((k, v) -> System.out.println(k + ":" + v));
-    }
+  @Override
+  public void filter(ClientRequestContext requestContext, ClientResponseContext responseContext) throws IOException {
+    System.out.println("Response filter for JAX-RS Client");
+    responseContext.getHeaders().forEach((k, v) -> System.out.println(k + ":" + v));
+  }
 }

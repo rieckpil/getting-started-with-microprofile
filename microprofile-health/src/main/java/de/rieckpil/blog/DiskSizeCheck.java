@@ -10,19 +10,19 @@ import java.io.File;
 @Liveness
 public class DiskSizeCheck implements HealthCheck {
 
-    @Override
-    public HealthCheckResponse call() {
+  @Override
+  public HealthCheckResponse call() {
 
-        File file = new File("/");
-        long freeSpace = file.getFreeSpace() / 1024 / 1024;
+    File file = new File("/");
+    long freeSpace = file.getFreeSpace() / 1024 / 1024;
 
-        HealthCheckResponseBuilder responseBuilder = HealthCheckResponse.builder()
-                .name("diskSizeCheck")
-                .withData("remainingSpace", freeSpace);
+    HealthCheckResponseBuilder responseBuilder = HealthCheckResponse.builder()
+      .name("diskSizeCheck")
+      .withData("remainingSpace", freeSpace);
 
-        return responseBuilder
-                .state(freeSpace > 100)
-                .build();
+    return responseBuilder
+      .state(freeSpace > 100)
+      .build();
 
-    }
+  }
 }

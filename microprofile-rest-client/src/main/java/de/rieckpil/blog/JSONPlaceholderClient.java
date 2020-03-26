@@ -45,7 +45,7 @@ public interface JSONPlaceholderClient {
   Response updatePostById(@PathParam("id") String id, JsonObject post, @HeaderParam("X-Request-Id") String requestIdHeader);
 
   default String generateAuthHeader() {
-    return "Basic " + new String(Base64.getEncoder().encode("duke:SECRET" .getBytes()));
+    return "Basic " + new String(Base64.getEncoder().encode("duke:SECRET".getBytes()));
   }
 
 }

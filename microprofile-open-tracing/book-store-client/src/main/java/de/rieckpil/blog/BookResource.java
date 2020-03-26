@@ -10,13 +10,13 @@ import javax.ws.rs.core.Response;
 @Path("books")
 public class BookResource {
 
-    @Inject
-    private BookProvider bookProvider;
+  @Inject
+  private BookProvider bookProvider;
 
-    @GET
-    @Produces(MediaType.APPLICATION_JSON)
-    public Response getBooks() {
-        return Response.ok(bookProvider.getBooksFromBookStore()).build();
-    }
+  @GET
+  @Produces(MediaType.APPLICATION_JSON)
+  public Response getBooks() {
+    return Response.ok(bookProvider.getBooksFromBookStore()).build();
+  }
 
 }

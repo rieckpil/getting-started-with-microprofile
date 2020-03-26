@@ -8,8 +8,8 @@ import java.io.IOException;
 @Provider
 public class UserAgentClientFilter implements ClientRequestFilter {
 
-    @Override
-    public void filter(ClientRequestContext requestContext) throws IOException {
-        requestContext.getHeaders().add("User-Agent", "MP-Service-XYZ");
-    }
+  @Override
+  public void filter(ClientRequestContext requestContext) throws IOException {
+    requestContext.getHeaders().add("User-Agent", "MP-Service-XYZ");
+  }
 }

@@ -13,14 +13,14 @@ import javax.ws.rs.core.Response;
 @Produces(MediaType.APPLICATION_JSON)
 public class OrderResources {
 
-    @GET
-    @PermitAll
-    public Response getOrder() {
-        JsonObject order = Json.createObjectBuilder()
-                .add("amount", 42)
-                .add("product", "bike")
-                .build();
+  @GET
+  @PermitAll
+  public Response getOrder() {
+    JsonObject order = Json.createObjectBuilder()
+      .add("amount", 42)
+      .add("product", "bike")
+      .build();
 
-        return Response.ok(order).build();
-    }
+    return Response.ok(order).build();
+  }
 }

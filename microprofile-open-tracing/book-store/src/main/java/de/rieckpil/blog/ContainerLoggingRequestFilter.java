@@ -8,11 +8,11 @@ import java.time.LocalDateTime;
 @Provider
 public class ContainerLoggingRequestFilter implements ContainerRequestFilter {
 
-    @Override
-    public void filter(ContainerRequestContext requestContext) {
-        System.out.println("==============");
-        System.out.println("Incoming request at: " + LocalDateTime.now());
-        requestContext.getHeaders().forEach((k, v) -> System.out.println(k + ":" + v));
-        System.out.println("==============");
-    }
+  @Override
+  public void filter(ContainerRequestContext requestContext) {
+    System.out.println("==============");
+    System.out.println("Incoming request at: " + LocalDateTime.now());
+    requestContext.getHeaders().forEach((k, v) -> System.out.println(k + ":" + v));
+    System.out.println("==============");
+  }
 }

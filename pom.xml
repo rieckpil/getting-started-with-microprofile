@@ -38,7 +38,7 @@
 
   <properties>
     <java.version>11</java.version>
-    <microprofile.version>3.3</microprofile.version>
+    <microprofile.version>3.2</microprofile.version>
     <junit-jupiter.version>5.5.0</junit-jupiter.version>
     <microshed-testing.version>0.6.2</microshed-testing.version>
     <slf4j-log4j12.version>1.7.29</slf4j-log4j12.version>

@@ -39,6 +39,7 @@ public class BookCommentClient {
   }
 
   @Timed(name = "getBookCommentByBookIdDuration")
+  //@SimplyTimed(name = "getBookCommentByBookIdDuration")
   public String getBookCommentByBookId(String bookId) {
     this.sleepRandom();
 

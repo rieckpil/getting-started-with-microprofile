@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <server description="new server">
 
-    <featureManager>
-        <feature>microProfile-3.2</feature>
-        <feature>usr:opentracingZipkin-0.31</feature>
-    </featureManager>
+  <featureManager>
+    <feature>microProfile-3.3</feature>
+    <feature>usr:opentracingZipkin-0.31</feature>
+  </featureManager>
 
-    <opentracingZipkin host="zipkin" port="9411"/>
+  <opentracingZipkin host="zipkin" port="9411"/>
 
-    <mpMetrics authentication="false"/>
+  <mpMetrics authentication="false"/>
 
-    <ssl id="defaultSSLConfig" keyStoreRef="defaultKeyStore" trustStoreRef="jdkTrustStore"/>
-    <keyStore id="jdkTrustStore" location="${java.home}/lib/security/cacerts" password="changeit"/>
+  <ssl id="defaultSSLConfig" keyStoreRef="defaultKeyStore" trustStoreRef="jdkTrustStore"/>
+  <keyStore id="jdkTrustStore" location="${java.home}/lib/security/cacerts" password="changeit"/>
 
-    <httpEndpoint id="defaultHttpEndpoint" httpPort="9080" httpsPort="9443"/>
+  <httpEndpoint id="defaultHttpEndpoint" httpPort="9080" httpsPort="9443"/>
 </server>

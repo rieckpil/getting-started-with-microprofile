@@ -2,20 +2,20 @@
          xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
-    <parent>
-        <groupId>de.rieckpil.blog</groupId>
-        <artifactId>microprofile-course-parent</artifactId>
-        <version>1.0-SNAPSHOT</version>
-        <relativePath>../../pom.xml</relativePath>
-    </parent>
-
-    <modelVersion>4.0.0</modelVersion>
+  <parent>
     <groupId>de.rieckpil.blog</groupId>
-    <artifactId>microprofile-open-tracing-client</artifactId>
+    <artifactId>microprofile-course-parent</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <packaging>war</packaging>
+    <relativePath>../../pom.xml</relativePath>
+  </parent>
 
-    <build>
-        <finalName>${project.artifactId}</finalName>
-    </build>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>de.rieckpil.blog</groupId>
+  <artifactId>microprofile-open-tracing-client</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>war</packaging>
+
+  <build>
+    <finalName>${project.artifactId}</finalName>
+  </build>
 </project>

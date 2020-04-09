@@ -63,6 +63,7 @@
         <artifactId>liberty-maven-plugin</artifactId>
         <version>3.1</version>
         <configuration>
+          <libertyRuntimeVersion>20.0.0.4</libertyRuntimeVersion>
           <serverXmlFile>../server.xml</serverXmlFile>
         </configuration>
       </plugin>

@@ -31,8 +31,8 @@ Repository for the [YouTube series](https://www.youtube.com/watch?v=0h3QceSBBiY&
 
 ## Technologies used for this series:
 
-* **MicroProfile 3.2**
-* **OpenLiberty 19.0.0.12**
+* **MicroProfile 3.3**
+* **OpenLiberty 20.0.0.4**
 * **Java 11**
 * **Maven 3.6**
 * **WAD** (Watch and Deploy) from [Adam Bien](https://wad.sh/) ([setup](https://rieckpil.de/review-improved-java-jakarta-ee-productivity-with-adam-biens-wad-watch-and-deploy/))
@@ -51,7 +51,7 @@ The following base `server.xml` configuration is used:
 <server description="new server">
 
     <featureManager>
-        <feature>microProfile-3.2</feature>
+        <feature>microProfile-3.3</feature>
     </featureManager>
 
     <mpMetrics authentication="false"/>

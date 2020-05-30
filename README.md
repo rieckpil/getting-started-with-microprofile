@@ -2,17 +2,13 @@
 
 [![](https://github.com/rieckpil/getting-started-with-eclipse-microprofile/workflows/Build%20Java/badge.svg)](https://github.com/rieckpil/getting-started-with-eclipse-microprofile/actions)
 
-» Get the full Course Bundle [here](https://rieckpil.de/p/eclipse-microprofile-course-bundle).
-
 <p align="center">
   <a href="https://rieckpil.de/p/eclipse-microprofile-course-bundle">
     <img src="https://rieckpil.de/wp-content/uploads/2019/11/gettingStartedWithEclipseMicroProfileBundle-e1573245583433.png" alt=" Bundle Logo"/>
   </a>
 </p>
 
-Repository for the [YouTube series](https://www.youtube.com/watch?v=0h3QceSBBiY&list=PLFjB4VDnlT_3vXkrLkSBW7j6ygQRXBypA) *Getting started with Eclipse MicroProfile*
-
-[![Series logo](https://rieckpil.de/wp-content/uploads/2019/11/gettingStartedWithEclipseMicroProfileYT_Full.png "Series Logo")](https://www.youtube.com/watch?v=0h3QceSBBiY&list=PLFjB4VDnlT_3vXkrLkSBW7j6ygQRXBypA)
+» Repository for the Getting Started with Eclipse MicroProfile [Course Bundle](https://rieckpil.de/p/eclipse-microprofile-course-bundle).
 
 ## Specifications:
 
@@ -32,7 +28,7 @@ Repository for the [YouTube series](https://www.youtube.com/watch?v=0h3QceSBBiY&
 ## Technologies used for this series:
 
 * **MicroProfile 3.3**
-* **OpenLiberty 20.0.0.4**
+* **OpenLiberty 20.0.0.5**
 * **Java 11**
 * **Maven 3.6**
 * **WAD** (Watch and Deploy) from [Adam Bien](https://wad.sh/) ([setup](https://rieckpil.de/review-improved-java-jakarta-ee-productivity-with-adam-biens-wad-watch-and-deploy/))

@@ -1,4 +1,4 @@
-# Getting started with Eclipse MicroProfile
+# Getting started with MicroProfile
 
 [![](https://github.com/rieckpil/getting-started-with-eclipse-microprofile/workflows/Build%20Java/badge.svg)](https://github.com/rieckpil/getting-started-with-eclipse-microprofile/actions)
 
@@ -8,7 +8,7 @@
   </a>
 </p>
 
-» Repository for the Getting Started with Eclipse MicroProfile [Course Bundle](https://rieckpil.de/p/eclipse-microprofile-course-bundle).
+» Repository for the Getting Started with MicroProfile [Course Bundle](https://rieckpil.de/p/eclipse-microprofile-course-bundle).
 
 ## Specifications:
 
@@ -40,7 +40,7 @@ Each subfolder contains a `buildAndRun.sh` (Linux/Mac) and `buildAndRun.bat` (Wi
 
 ## Open Liberty configuration
 
-The following base `server.xml` configuration is used:
+All projects use the following base `server.xml` configuration:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>

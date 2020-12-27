@@ -1,5 +1,6 @@
 package de.rieckpil.blog;
 
+import java.util.Set;
 import org.eclipse.microprofile.config.spi.ConfigSource;
 
 import java.util.HashMap;
@@ -24,6 +25,11 @@ public class CustomConfigSource implements ConfigSource {
     properties.put("my.app.password", CUSTOM_PASSWORD);
     properties.put("message", MESSAGE);
     return properties;
+  }
+
+  @Override
+  public Set<String> getPropertyNames() {
+    return getProperties().keySet();
   }
 
   @Override

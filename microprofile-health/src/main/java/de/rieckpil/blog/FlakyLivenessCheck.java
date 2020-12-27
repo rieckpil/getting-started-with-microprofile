@@ -15,7 +15,7 @@ public class FlakyLivenessCheck implements HealthCheck {
     return HealthCheckResponse
       .builder()
       .name("liveness")
-      .state(ThreadLocalRandom.current().nextBoolean())
+      .status(ThreadLocalRandom.current().nextBoolean())
       .build();
   }
 }

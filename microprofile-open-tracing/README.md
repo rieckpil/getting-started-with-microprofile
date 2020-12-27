@@ -1,8 +1,8 @@
 # MicroProfile OpenTracing
 
 * [GitHub](https://github.com/eclipse/microprofile-opentracing)
-* [Spec](https://github.com/eclipse/microprofile-opentracing/releases/download/1.3/microprofile-opentracing-spec-1.3.pdf)
-* Current version: **1.3** in MicroProfile **3.0**
+* [Spec](https://download.eclipse.org/microprofile/microprofile-opentracing-2.0/microprofile-opentracing-spec-2.0.html#_release_2_0)
+* Current version: **2.0** in **MicroProfile 4.0**
 * Detailed blog post about this specification: [#WHATIS?: MicroProfile OpenTracing](https://rieckpil.de/whatis-eclipse-microprofile-opentracing/)
 * YouTube video about this specification: [Getting started with Eclipse MicroProfile 3.0 - MicroProfile OpenTracing 1.3](https://www.youtube.com/watch?v=b43XgElBxEo)
 

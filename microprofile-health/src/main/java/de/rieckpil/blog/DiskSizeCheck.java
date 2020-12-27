@@ -21,7 +21,7 @@ public class DiskSizeCheck implements HealthCheck {
       .withData("remainingSpace", freeSpace);
 
     return responseBuilder
-      .state(freeSpace > 100)
+      .status(freeSpace > 100)
       .build();
 
   }

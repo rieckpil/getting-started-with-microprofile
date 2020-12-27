@@ -1,4 +1,4 @@
-FROM openliberty/open-liberty:20.0.0.5-kernel-java11-openj9-ubi
+FROM open-liberty:beta-java11
 
 COPY --chown=1001:0  target/microprofile-health.war /config/dropins/
 COPY --chown=1001:0  target/server.xml /config

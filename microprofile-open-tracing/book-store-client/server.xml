@@ -2,8 +2,8 @@
 <server description="new server">
 
   <featureManager>
-    <feature>microProfile-3.3</feature>
-    <feature>usr:opentracingZipkin-0.31</feature>
+    <feature>microProfile-4.0</feature>
+    <feature>usr:opentracingZipkin-0.33</feature>
   </featureManager>
 
   <opentracingZipkin host="zipkin" port="9411"/>

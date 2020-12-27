@@ -27,8 +27,8 @@
 
 ## Technologies used for this series:
 
-* **MicroProfile 3.3**
-* **OpenLiberty 20.0.0.5**
+* **MicroProfile 4.0**
+* **OpenLiberty 21.0.0.1-beta**
 * **Java 11**
 * **Maven 3.6**
 * **WAD** (Watch and Deploy) from [Adam Bien](https://wad.sh/) ([setup](https://rieckpil.de/review-improved-java-jakarta-ee-productivity-with-adam-biens-wad-watch-and-deploy/))
@@ -47,7 +47,7 @@ All projects use the following base `server.xml` configuration:
 <server description="new server">
 
     <featureManager>
-        <feature>microProfile-3.3</feature>
+        <feature>microProfile-4.0</feature>
     </featureManager>
 
     <mpMetrics authentication="false"/>
